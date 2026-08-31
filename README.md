@@ -97,11 +97,11 @@ npm run test:coverage
 
 ---
 
-## 6. Equipo de Desarrollo
+## 6. Equipo de Desarrollo: SinergIA
 
-| Integrante | Codigo / Carrera | Rol en el Proyecto | Usuario GitHub |
-| :--- | :--- | :--- | :--- |
-| **Manuel Aranda (Manu)** | M6 (Mecatronica) | Team Leader, AI Architect, PM & Pitch Lead | [@usuario](https://github.com/...) |
-| **Alex** | M6 (Mecatronica) | [Rol asignado] | [@usuario](https://github.com/...) |
-| **Brian** | I2 (Sistemas) | [Rol asignado] | [@usuario](https://github.com/...) |
-| **Miguel** | I2 (Sistemas) | [Rol asignado] | [@usuario](https://github.com/...) |
+| N° | Integrante | Especialidad | Rol en el Proyecto | Perfil GitHub | Foco Operativo |
+| :---: | :--- | :---: | :--- | :--- | :--- |
+| **01** | **Manuel Aranda (Manu)** | **M6** (Mecatronica) | **Team Leader, AI Architect, PM & Pitch Lead** | [@MizardB](https://github.com/MizardB) | Direccion, Arquitectura IA/C2, Gobernanza Git, Despliegue Cloud y Pitch. |
+| **02** | **Miguel** | **I2** (Sistemas) | **Frontend Lead (UI/UX & Client Core)** | [@Miguel-Ghost](https://github.com/Miguel-Ghost) | Desarrollo de interfaz, integracion con APIs, responsive design y UX en 3 clics. |
+| **03** | **Brian** | **I2** (Sistemas) | **Backend Lead (API, DB & Services)** | [@BrianJY-14](https://github.com/BrianJY-14) | Construccion de endpoints, logica de negocio, pipeline de datos e integracion de IA. |
+| **04** | **Alex** | **M6** (Mecatronica) | **QA & Testing Lead (Automation & Quality)** | [@josealexandromartinezcox-stack](https://github.com/josealexandromartinezcox-stack) | Suite de pruebas automaticas (Happy Path y errores criticos), validacion de edge cases y smoke testing. |
