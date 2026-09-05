@@ -4,7 +4,7 @@
 >
 > **Quality Opportunities convierte retos reales, simulados y abiertos en evidencia verificable de capacidad. Aprender deja de ser solo acumular cursos: se convierte en experiencia que puedes mostrar, explicar y defender.**
 
-> **Quality Opportunities es un HUB de retos y oportunidades de aprendizaje aplicado** que centraliza desafíos dispersos y transforma lo que el estudiante resuelve en **Proof-of-Work verificable para su CV**, comenzando en software y escalando a otras disciplinas.
+ **Quality Opportunities es un HUB de retos y oportunidades de aprendizaje aplicado** que centraliza desafíos dispersos y transforma lo que el estudiante resuelve en **Proof-of-Work verificable para su CV**, comenzando en software y escalando a otras disciplinas.
 
 ```text
 OPORTUNIDADES DISPERSAS
