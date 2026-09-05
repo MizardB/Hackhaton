@@ -29,13 +29,13 @@ Hackathons · Retos educativos · Empresas · Open Issues · Concursos
 
 ### Problematica
 
-Muchos estudiantes aprenden a construir proyectos, pero llegan al mercado con poca evidencia de cómo responden ante problemas cercanos a un entorno profesional. En Perú, **64,7% de jóvenes ocupados con educación universitaria culminada se encontraba en una ocupación no acorde con su nivel educativo en 2022** [1].
+El problema no es que a los estudiantes les falte capacidad. El problema es que gran parte de su aprendizaje queda encerrado en cursos, ejercicios y proyectos que luego dicen poco sobre cómo responden ante una situación cercana al mundo profesional.
 
-La brecha también aparece del lado empresarial: **más del 75% de empresas peruanas no logra cubrir sus vacantes digitales** [2] y **65% de empleadores reportó dificultades para encontrar las habilidades que necesita**, con TI y Datos entre las más escasas [3].
+Al llegar al mercado aparece la paradoja del **“CV en blanco”**: para conseguir experiencia se pide experiencia, pero sin una primera oportunidad real es difícil producir evidencia que merezca confianza.
 
-La IA acelera todavía más esta tensión: producir una solución ya no basta para demostrar comprensión. El problema no es usar IA, sino **no poder demostrar qué se entiende, qué se puede modificar y qué se puede defender**.
+La IA vuelve esta diferencia todavía más visible. Generar código, análisis o propuestas es cada vez más accesible; por eso el valor ya no está solo en entregar una respuesta, sino en **comprenderla, adaptarla, detectar sus fallos y defender las decisiones tomadas**.
 
-A la vez, las oportunidades para ganar experiencia aplicada ya existen —hackathons, retos empresariales, programas universitarios e innovación abierta— pero permanecen **dispersas y temporales** [5][6][7]. QO conecta ambas brechas: **oportunidades fragmentadas + evidencia profesional insuficiente**.
+Las oportunidades para practicar sí existen —hackathons, retos empresariales, programas universitarios, open issues y concursos— pero están dispersas, vencen y muchas veces no terminan convertidas en una evidencia profesional acumulativa. **QO nace para conectar esas oportunidades con una forma clara de demostrar capacidad.**
 
 ### Usuario Objetivo
 
