@@ -36,7 +36,7 @@ export default function LoginForm({ onLogin }) {
 
         <div className="flex flex-col items-center text-center">
           <img
-            alt="SKILL HUB Logo"
+            alt="Quality Opportunities Logo"
             className="h-10 mx-auto mb-space-sm object-contain"
             src="https://lh3.googleusercontent.com/aida/AEtjO1XDbkFnd29m5rcC2hWQoTFS_XVbzlMHlSA1gUFSuxK3Yk7kzwD9n46_TqluMwpakP6CA60yumreubjNCOYIxZpUnbRIhWLHR9psR2oK411x9SnVw4_-4amlhDLQapzmF4jvLtgH4MFXw7llJlFZ8MvhSxQR5ta_Hr5Qs7sHmlbrVr9yssg4Y-oJ-zb2M-hTYmInK367ukJ2RYWuU1lhFS6-jQ6GBZFYfHpb0Fn0Uqef5seKjSxvzHPk62Du"
           />
@@ -55,7 +55,7 @@ export default function LoginForm({ onLogin }) {
                 <span className="material-symbols-outlined text-[14px] text-primary">alternate_email</span>
                 CORREO ELECTRÓNICO
               </label>
-              <span className="font-code-sm text-code-sm text-outline" id="domain-hint">@skillhub.tech</span>
+              <span className="font-code-sm text-code-sm text-outline" id="domain-hint">@qualityopportunities.app</span>
             </div>
             <div className="relative flex items-center">
               <input
@@ -66,7 +66,7 @@ export default function LoginForm({ onLogin }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-surface-container-low text-on-surface placeholder:text-outline font-code-md text-code-md px-space-md py-3 rounded-lg outline-none transition-all shadow-inner focus:bg-surface-container"
-                placeholder="usuario@skillhub.tech"
+                placeholder="usuario@qualityopportunities.app"
               />
             </div>
           </div>

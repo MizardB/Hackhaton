@@ -23,7 +23,7 @@ export default function DetalleRetoPage({ retoId, onIniciar, onVolver }) {
             </div>
             <div className="h-4 w-px bg-outline-variant"></div>
             <span className="font-headline-sm text-headline-sm tracking-tight font-bold text-on-surface uppercase">
-              SKILL HUB
+              Quality Opportunities
             </span>
             <span className="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-high text-primary uppercase">
               ESTUDIANTE
@@ -234,7 +234,7 @@ Backpressure Ctr <- Adaptive Drain Rate Feedback Loop -----`}
                     <div>
                       <label className="font-code-sm text-code-sm text-on-surface-variant mb-space-2xs block">IMAGEN DOCKER BASE DEL ENTORNO DE PRUEBAS:</label>
                       <div className="flex items-center justify-between bg-surface-container-lowest px-space-md py-space-sm rounded-lg shadow-inner">
-                        <code className="font-code-md text-code-md text-primary truncate select-all">docker pull registry.skillhub.tech/challenges/{reto.id}:latest</code>
+                        <code className="font-code-md text-code-md text-primary truncate select-all">docker pull registry.qualityopportunities.tech/challenges/{reto.id}:latest</code>
                       </div>
                     </div>
                     <div>
@@ -354,7 +354,7 @@ Backpressure Ctr <- Adaptive Drain Rate Feedback Loop -----`}
                         <span className="text-primary font-semibold">v1.4.2</span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <code className="font-code-sm text-code-sm text-secondary truncate">skillhub challenge fetch {reto.id}</code>
+                        <code className="font-code-sm text-code-sm text-secondary truncate">qualityopportunities challenge fetch {reto.id}</code>
                       </div>
                     </div>
                   </div>
@@ -374,7 +374,7 @@ Backpressure Ctr <- Adaptive Drain Rate Feedback Loop -----`}
                 <span className="text-on-surface-variant">TELEMETRY LATENCY: <strong className="text-primary font-code-sm">12ms</strong></span>
               </div>
               <div>
-                <span>© 2025 SKILL HUB CORE ARCHITECTURE // ENGINE RUNNER v4.2</span>
+                <span>© 2025 Quality Opportunities CORE ARCHITECTURE // ENGINE RUNNER v4.2</span>
               </div>
             </div>
           </div>
@@ -391,7 +391,7 @@ Backpressure Ctr <- Adaptive Drain Rate Feedback Loop -----`}
             <span className="text-outline-variant font-code-sm text-code-sm">/</span>
             <span className="font-code-sm text-code-sm text-on-surface-variant">PORTAL V2.4.9</span>
           </div>
-          <div className="font-code-sm text-code-sm text-outline">© 2024 SKILL HUB ACADEMY. ALL RIGHTS RESERVED.</div>
+          <div className="font-code-sm text-code-sm text-outline">© 2024 Quality Opportunities ACADEMY. ALL RIGHTS RESERVED.</div>
         </div>
       </footer>
     </div>

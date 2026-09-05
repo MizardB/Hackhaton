@@ -35,7 +35,7 @@ export default function AccesoPage({ onLogin }) {
               NODE_ONLINE
             </span>
           </div>
-          <div className="font-code-sm text-code-sm text-outline">© 2025 SKILL HUB CORE. ALL PROTOCOLS SECURE.</div>
+          <div className="font-code-sm text-code-sm text-outline">© 2025 Quality Opportunities CORE. ALL PROTOCOLS SECURE.</div>
           <div className="flex items-center gap-space-md">
             <a className="font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-colors" data-path="system-status" href="#">
               TELEMETRY

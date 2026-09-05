@@ -33,7 +33,7 @@ export default function CatalogoPage({ onSelectReto }) {
             </div>
             <div className="h-4 w-px bg-outline-variant"></div>
             <span className="font-headline-sm text-headline-sm tracking-tight font-bold text-on-surface uppercase">
-              SKILL HUB
+              Quality Opportunities
             </span>
             <span className="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-high text-primary uppercase">
               ESTUDIANTE
@@ -288,7 +288,7 @@ export default function CatalogoPage({ onSelectReto }) {
             <span className="text-outline-variant font-code-sm text-code-sm">/</span>
             <span className="font-code-sm text-code-sm text-on-surface-variant">PORTAL V2.4.9</span>
           </div>
-          <div className="font-code-sm text-code-sm text-outline">© 2024 SKILL HUB ACADEMY. ALL RIGHTS RESERVED.</div>
+          <div className="font-code-sm text-code-sm text-outline">© 2024 Quality Opportunities ACADEMY. ALL RIGHTS RESERVED.</div>
         </div>
       </footer>
     </div>

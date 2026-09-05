@@ -23,7 +23,7 @@ export default function EspacioTrabajoPage({ retoId, onEnviar, onVolver }) {
             </div>
             <div className="h-4 w-px bg-outline-variant"></div>
             <span className="font-headline-sm text-headline-sm tracking-tight font-bold text-on-surface uppercase">
-              SKILL HUB
+              Quality Opportunities
             </span>
             <span className="font-label-caps text-label-caps px-space-xs py-space-2xs rounded bg-surface-container-high text-primary uppercase">
               ESTUDIANTE
@@ -140,7 +140,7 @@ export default function EspacioTrabajoPage({ retoId, onEnviar, onVolver }) {
                   <div
                     className="pl-space-md pr-space-2xl font-mono leading-[1.65rem] whitespace-pre text-on-surface flex-1"
                     dangerouslySetInnerHTML={{
-                      __html: `<div><span class="text-outline">// SKILL HUB — Ingestion Engine v3 (Lock-free zero alloc harness)</span></div>
+                      __html: `<div><span class="text-outline">// Quality Opportunities — Ingestion Engine v3 (Lock-free zero alloc harness)</span></div>
 <div><span class="text-primary font-semibold">use</span> <span class="text-on-surface">std::sync::atomic::{</span><span class="text-tertiary">AtomicUsize</span>, <span class="text-tertiary">Ordering</span><span class="text-on-surface">};</span></div>
 <div><span class="text-primary font-semibold">use</span> <span class="text-on-surface">std::sync::</span><span class="text-tertiary">Arc</span><span class="text-on-surface">;</span></div>
 <div><span class="text-primary font-semibold">use</span> <span class="text-on-surface">crate::ring_buffer::</span><span class="text-tertiary">LockFreeRing</span><span class="text-on-surface">;</span></div>
@@ -357,7 +357,7 @@ export default function EspacioTrabajoPage({ retoId, onEnviar, onVolver }) {
             <span className="text-outline-variant font-code-sm text-code-sm">/</span>
             <span className="font-code-sm text-code-sm text-on-surface-variant">PORTAL V2.4.9</span>
           </div>
-          <div className="font-code-sm text-code-sm text-outline">© 2024 SKILL HUB ACADEMY. ALL RIGHTS RESERVED.</div>
+          <div className="font-code-sm text-code-sm text-outline">© 2024 Quality Opportunities ACADEMY. ALL RIGHTS RESERVED.</div>
         </div>
       </footer>
     </div>

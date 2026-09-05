@@ -55,3 +55,12 @@
   --border-radius-xl: 0.5rem;
   --border-radius-full: 0.75rem;
 }
+
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+
+::-webkit-scrollbar { display: none; }
