@@ -1,5 +1,9 @@
 # Quality Opportunities
 
+> ## **¿Cómo demuestra un estudiante lo que realmente sabe hacer si nadie le da la oportunidad de demostrarlo?**
+>
+> **Quality Opportunities convierte retos reales, simulados y abiertos en evidencia verificable de capacidad. Aprender deja de ser solo acumular cursos: se convierte en experiencia que puedes mostrar, explicar y defender.**
+
 > **HUB de retos y oportunidades de aprendizaje aplicado** que convierte lo que un estudiante resuelve en **evidencia verificable de lo que realmente puede hacer**.
 
 **Quality Opportunities centraliza oportunidades dispersas, permite resolverlas bajo criterios claros y transforma cada resultado relevante en Proof-of-Work navegable para el CV.** Nace desde software porque allí el desempeño puede comprobarse con pruebas y métricas técnicas, pero el modelo está pensado para extenderse a otras disciplinas donde exista un problema, un artefacto observable y una forma defendible de evaluarlo.
