@@ -122,7 +122,7 @@ flowchart TD
 
 ---
 
-## 4. Evaluacion Tecnica y Testing
+## 3. Evaluacion Tecnica y Testing
 
 QO busca **comprobar que una solución realmente funciona bajo criterios claros y repetibles**. En software, esta comprobación puede ejecutarse automáticamente en un entorno aislado —sandbox— y adaptarse a lo que cada reto necesita medir.
 
@@ -146,7 +146,7 @@ Para la demo del MVP priorizamos dos señales que un jurado puede comprender inm
 
 ---
 
-## 5. Proof-of-Work: Evidencia, Insignia y CV Dinamico
+## 4. Proof-of-Work: Evidencia, Insignia y CV Dinamico
 
 El producto no termina cuando un reto aparece como “completado”. El resultado importante es una **evidencia profesional explorable**: el Proof-of-Work que respalda lo que el estudiante afirma saber hacer.
 
@@ -179,7 +179,7 @@ Repetir retos casi idénticos aporta valor marginal decreciente; el CV destaca l
 
 ---
 
-## 6. Escalabilidad y Evolución del Ecosistema
+## 5. Escalabilidad y Evolución del Ecosistema
 
 El MVP valida una hipótesis concreta:
 
