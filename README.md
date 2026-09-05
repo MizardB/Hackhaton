@@ -29,17 +29,13 @@ Hackathons · Retos educativos · Empresas · Open Issues · Concursos
 
 ### Problematica
 
-La formación universitaria todavía se apoya en muchos ejercicios académicos aislados que no reproducen las restricciones, decisiones ni fallos de un entorno profesional. En el Perú, la transición entre formación y empleo muestra una brecha observable: el MTPE reportó que, entre jóvenes ocupados de 18 a 29 años con educación superior universitaria culminada, **64,7% se encontraba en una ocupación no acorde con su nivel educativo en 2022** [1].
+Muchos estudiantes aprenden a construir proyectos, pero llegan al mercado con poca evidencia de cómo responden ante problemas cercanos a un entorno profesional. En Perú, **64,7% de jóvenes ocupados con educación universitaria culminada se encontraba en una ocupación no acorde con su nivel educativo en 2022** [1].
 
-En el frente digital, el problema también aparece desde la demanda empresarial. En marzo de 2024, el MTPE señaló que **más del 75% de las empresas en el Perú no logra cubrir sus vacantes digitales** [2]. En paralelo, la Encuesta de Expectativa de Empleo Q1 2024 de ManpowerGroup —realizada a 525 empleadores peruanos— encontró que **65% reportaba dificultades para encontrar talento con las habilidades que necesitaba**, y ubicó **TI y Datos** como el grupo de habilidades más difícil de encontrar [3]. Son mediciones distintas —vacantes digitales frente a escasez general de talento—, pero ambas apuntan a una brecha persistente entre capacidades disponibles y capacidades demandadas.
+La brecha también aparece del lado empresarial: **más del 75% de empresas peruanas no logra cubrir sus vacantes digitales** [2] y **65% de empleadores reportó dificultades para encontrar las habilidades que necesita**, con TI y Datos entre las más escasas [3].
 
-Al mismo tiempo, la IA permite producir soluciones cada vez más rápido, por lo que entregar código o un documento terminado ya no demuestra por sí solo que exista comprensión. Para QO, el problema no es usar IA: es **no poder demostrar qué parte del resultado se entiende, se puede modificar y se puede defender**.
+La IA acelera todavía más esta tensión: producir una solución ya no basta para demostrar comprensión. El problema no es usar IA, sino **no poder demostrar qué se entiende, qué se puede modificar y qué se puede defender**.
 
-El resultado es la paradoja del **“CV en blanco”**: estudiantes con conocimientos y proyectos, pero con poca evidencia verificable de desempeño frente a problemas cercanos al mundo profesional. El término resume una hipótesis de producto; no implica que todo egresado carezca de experiencia, sino que muchas señales académicas tradicionales son difíciles de traducir rápidamente en evidencia observable de capacidad aplicada.
-
-Las oportunidades para obtener experiencia aplicada sí existen, pero suelen estar **fragmentadas** entre hackathons, datathons, programas universitarios, concursos, retos empresariales, comunidades y plataformas externas. El propio mercado peruano muestra este patrón: BBVA Perú ha utilizado hackathons para resolver problemas reales y atraer talento tecnológico [5]; la Innovathon Ulima 2024, coorganizada con Yape, planteó retos empresariales a equipos multidisciplinarios [6]; y ProInnóvate financia programas de innovación abierta donde empresas identifican y priorizan problemas para co-crear soluciones con actores externos [7]. Estas iniciativas validan el mecanismo **reto → solución → talento**, pero siguen existiendo como programas separados y temporales.
-
-Quality Opportunities conecta esos dos problemas: **descubrimiento de oportunidades + evidencia de capacidad**.
+A la vez, las oportunidades para ganar experiencia aplicada ya existen —hackathons, retos empresariales, programas universitarios e innovación abierta— pero permanecen **dispersas y temporales** [5][6][7]. QO conecta ambas brechas: **oportunidades fragmentadas + evidencia profesional insuficiente**.
 
 ### Usuario Objetivo
 
