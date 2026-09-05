@@ -122,45 +122,6 @@ flowchart TD
 
 ---
 
-## 3. Stack Tecnologico e Inteligencia Artificial
-
-| Capa | Tecnologia / Servicio | Justificacion Tecnica |
-| :--- | :--- | :--- |
-| **Frontend** | React / Next.js / Tailwind CSS | Interfaz web moderna, responsive y orientada a una experiencia interactiva. |
-| **Editor Web** | Monaco Editor | Edición y visualización de código y diffs directamente en navegador. |
-| **Backend** | Python + FastAPI | APIs asíncronas, ejecución de pruebas, webhooks y servicios de evaluación. |
-| **Validacion** | Pydantic | Contratos estrictos y validación estructurada de entradas y resultados. |
-| **Base de Datos** | PostgreSQL | Persistencia relacional de usuarios, retos, intentos, resultados y evidencia. |
-| **Caching / Colas** | Redis | Soporte para benchmarking, colas y escenarios de optimización. |
-| **Sandbox** | Docker | Aislamiento efímero de ejecuciones y límites de CPU/memoria. |
-| **CI/CD** | Pipeline automatizado | Ejecución reproducible de tests, benchmarks y validaciones por entrega. |
-| **IA** | Tutor IA Socrático + asistencia contextual | Apoyo al aprendizaje, razonamiento y comprensión del trabajo realizado. |
-| **Integridad** | SHA-256 | Vinculación de evidencia con entregas y resultados verificables. |
-
-### IA como herramienta de aprendizaje
-
-Quality Opportunities **no penaliza el uso de Inteligencia Artificial**. La plataforma parte de que los futuros profesionales trabajarán junto a herramientas de IA y que saber utilizarlas correctamente también es una competencia.
-
-La evaluación se desplaza desde:
-
-> “¿Lo hizo completamente solo?”
-
-hacia:
-
-> “¿Entiende lo que construyó? ¿Puede modificarlo, detectar errores y defender sus decisiones?”
-
-El objetivo no es formar estudiantes que compitan contra la IA, sino estudiantes capaces de **trabajar con IA sin delegar su comprensión**.
-
-### Tutor IA Socrático y Defensa Técnica
-
-El Tutor IA puede guiar mediante preguntas sobre arquitectura, algoritmos, trade-offs y decisiones de diseño. Algunos retos pueden activar una **defensa técnica adaptativa**, seleccionando decisiones o métricas de la entrega para comprobar que la solución fue asimilada.
-
-### Aprendizaje Vicario y Diff
-
-Al cierre de un reto, el estudiante puede comparar su implementación con una solución de referencia mediante un visor de diferencias, entendiendo decisiones técnicas y trade-offs alternativos.
-
----
-
 ## 4. Evaluacion Tecnica y Testing
 
 QO busca **comprobar que una solución realmente funciona bajo criterios claros y repetibles**. En software, esta comprobación puede ejecutarse automáticamente en un entorno aislado —sandbox— y adaptarse a lo que cada reto necesita medir.
