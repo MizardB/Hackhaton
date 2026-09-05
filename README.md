@@ -226,18 +226,32 @@ por evidencia concreta y verificable del tipo:
 
 ---
 
-## 7. Modelo de Negocio
+## 7. Modelo de Negocio y Alianzas
 
-Quality Opportunities está planteado como una plataforma educativa y de validación técnica, **no como una bolsa de empleo**.
+Quality Opportunities está planteado como una plataforma educativa y de validación técnica, **no como una bolsa de empleo**. El modelo combina acceso para estudiantes, servicios institucionales y distintas formas de colaboración con empresas y organizaciones que ya gestionan sus propios retos o concursos.
 
 | Segmento | Modelo |
 | :--- | :--- |
 | **Estudiantes — Free** | Acceso a retos, sandbox CI/CD y emisión de insignias. |
 | **Estudiantes — Pro** | Tutor IA Socrático, scorecards avanzados, telemetría, defensa adaptativa y visor Diff. |
-| **Empresas — B2B** | Publicación de retos y posibilidad de patrocinio o employer branding. |
+| **Empresas — B2B** | Publicación de retos propios, patrocinio, employer branding y acceso a mecanismos de difusión dentro de la plataforma. |
+| **Retos Externos / Partnerships** | Promoción e integración de concursos, hackathons o challenges alojados en plataformas externas sin necesidad de duplicarlos dentro de Quality Opportunities. |
 | **Universidades — B2U** | Integración curricular y uso institucional de retos y evidencia técnica. |
 
 La propuesta plantea un Plan Pro de referencia de **S/. 12 por reto o S/. 35 al mes** y una futura licencia institucional para universidades.
+
+### Retos externos y acuerdos de colaboración
+
+Una empresa u organización puede tener un concurso técnico ya publicado y gestionado en su propia página. En ese caso, **Quality Opportunities no necesita recrear el reto**: puede mostrarlo dentro de un catálogo de oportunidades, dirigir al estudiante al sitio oficial y conservar una capa propia de descubrimiento, orientación y trazabilidad.
+
+Esta relación puede funcionar mediante distintos esquemas:
+
+- **Promoción patrocinada:** la organización paga por destacar su concurso o reto ante estudiantes con perfiles relevantes.
+- **Partnership institucional:** ambas plataformas mantienen un acuerdo de colaboración y Quality Opportunities actúa como canal de descubrimiento y participación.
+- **Integración contractual o técnica:** cuando exista acuerdo, se pueden sincronizar metadatos, fechas, estados, resultados o evidencias mediante enlaces, APIs, webhooks u otros mecanismos.
+- **Employer Branding:** la empresa utiliza retos externos o propios para posicionarse frente a estudiantes sin convertir Quality Opportunities en una bolsa laboral tradicional.
+
+De esta forma, Quality Opportunities puede convertirse también en un **agregador curado de oportunidades de resolución**, conectando retos internos, simulados y externos dentro de una sola experiencia de aprendizaje.
 
 ---
 
@@ -255,15 +269,17 @@ Esto permite que los estudiantes comiencen a generar evidencia desde el primer m
 
 ---
 
-## 9. Escalabilidad Multidisciplinaria
+## 9. Escalabilidad y Evolución del Ecosistema
 
-El MVP comienza en **desarrollo de software** porque permite automatizar con rapidez la evaluación mediante tests, telemetría y entornos reproducibles. Sin embargo, la arquitectura conceptual de Quality Opportunities no está limitada al software.
-
-El principio general es:
+El MVP valida primero la hipótesis central: convertir resolución de retos en **evidencia de aprendizaje verificable**. A partir de esa base, Quality Opportunities puede crecer en varias direcciones sin alterar el núcleo del producto.
 
 > **Reto + Evidencia + Evaluación + Defensa = Aprendizaje verificable.**
 
-Este modelo puede extenderse hacia:
+### 9.1 Escalabilidad Multidisciplinaria
+
+El MVP comienza en **desarrollo de software** porque permite automatizar con rapidez la evaluación mediante tests, telemetría y entornos reproducibles. Sin embargo, la arquitectura conceptual de Quality Opportunities no está limitada al software.
+
+El modelo puede extenderse hacia:
 
 - **Ingeniería de Datos:** pipelines, streaming, calidad y procesamiento distribuido.
 - **Ciberseguridad:** hardening, análisis de vulnerabilidades y respuesta ante incidentes simulados.
@@ -273,6 +289,43 @@ Este modelo puede extenderse hacia:
 - **Otras disciplinas técnicas:** siempre que exista una forma clara de definir un reto, registrar evidencia y evaluar el dominio demostrado.
 
 Software es, por tanto, **la primera vertical de validación, no el límite de la plataforma**.
+
+### 9.2 Escalabilidad de Fuentes de Retos
+
+El ecosistema no depende de una única fuente de desafíos. Puede combinar:
+
+- Retos creados por Quality Opportunities.
+- Retos simulados de alta fidelidad.
+- Problemas reales aportados por empresas.
+- Casos públicos transformados en experiencias de aprendizaje.
+- Concursos, hackathons y challenges externos enlazados mediante partnerships.
+
+Esto reduce la dependencia de que cada empresa tenga que diseñar nuevamente un reto dentro de la plataforma y permite ampliar el catálogo con menor fricción.
+
+### 9.3 Escalabilidad del Sistema de Evidencia
+
+La Insignia puede evolucionar desde una credencial asociada a código y métricas de software hacia un estándar más general de **Proof-of-Work académico y técnico**, capaz de registrar:
+
+- Qué problema se resolvió.
+- Qué evidencia produjo el estudiante.
+- Cómo fue evaluada.
+- Qué herramientas utilizó.
+- Qué decisiones pudo defender.
+- Qué organización, docente o sistema respaldó el resultado.
+
+Esto permite que el CV Dinámico evolucione hacia un historial acumulativo de capacidades demostradas.
+
+### 9.4 Escalabilidad Institucional y de Alianzas
+
+Quality Opportunities puede crecer mediante relaciones con:
+
+- Empresas que publiquen o patrocinen retos.
+- Empresas que mantengan sus retos en plataformas externas.
+- Universidades que integren retos al currículo.
+- Comunidades técnicas y organizaciones profesionales.
+- Hackathons y concursos que busquen llegar a nuevos participantes.
+
+La plataforma puede así funcionar no solo como creadora de experiencias, sino como una **capa de conexión entre aprendizaje, evidencia y ecosistemas externos de oportunidades**.
 
 ### Roadmap inicial
 
@@ -289,8 +342,11 @@ Software es, por tanto, **la primera vertical de validación, no el límite de l
    - Kafka.
    - Pipelines distribuidos.
 
-3. **Fase 3 — Ciberseguridad y nuevas disciplinas**
-   - Expansión del estándar de retos e insignias hacia otras áreas de ingeniería.
+3. **Fase 3 — Nuevas disciplinas y ecosistema externo**
+   - Ciberseguridad.
+   - Ingeniería y robótica.
+   - Retos externos y partnerships.
+   - Expansión del estándar de retos e insignias.
 
 ---
 
