@@ -280,15 +280,7 @@ export default function CatalogoPage({ onSelectReto }) {
 
       <footer className="w-full bg-surface-container-lowest">
         <div className="w-full max-w-container-max mx-auto px-gutter-desktop py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm">
-          <div className="flex items-center gap-space-sm">
-            <div className="flex items-center gap-space-2xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              <span className="font-code-sm text-code-sm text-on-surface-variant">SYS NODE: EUR-WEST3-PROD</span>
-            </div>
-            <span className="text-outline-variant font-code-sm text-code-sm">/</span>
-            <span className="font-code-sm text-code-sm text-on-surface-variant">PORTAL V2.4.9</span>
-          </div>
-          <div className="font-code-sm text-code-sm text-outline">© 2024 Quality Opportunities ACADEMY. ALL RIGHTS RESERVED.</div>
+          <div className="font-code-sm text-code-sm text-outline">© 2024 Quality Opportunities</div>
         </div>
       </footer>
     </div>

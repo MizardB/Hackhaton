@@ -23,17 +23,6 @@ export default function LoginForm({ onLogin }) {
     <div className="relative w-full max-w-md mx-auto">
       <div className="absolute -inset-0.5 bg-gradient-to-r from-primary via-secondary to-tertiary rounded-xl opacity-20 group-hover:opacity-35 blur transition duration-500"></div>
       <div className="relative bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden p-space-lg sm:p-space-xl flex flex-col gap-space-lg">
-        <div className="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
-          <span className="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-surface-container-high text-primary">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
-            AUTH_GATEWAY_v2.4
-          </span>
-          <span className="text-secondary font-code-sm text-code-sm flex items-center gap-1">
-            <span className="material-symbols-outlined text-[14px]">lock</span>
-            TLS 1.3 256-BIT
-          </span>
-        </div>
-
         <div className="flex flex-col items-center text-center">
           <img
             alt="Quality Opportunities Logo"
@@ -116,10 +105,6 @@ export default function LoginForm({ onLogin }) {
               />
               <span className="font-body-sm text-body-sm text-on-surface-variant">Mantener sesión activa</span>
             </label>
-            <span className="font-code-sm text-code-sm text-secondary flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              NODE_READY
-            </span>
           </div>
 
           <div className="flex flex-col gap-space-sm pt-space-xs">
@@ -146,14 +131,6 @@ export default function LoginForm({ onLogin }) {
         {error && (
           <p className="text-error text-body-sm font-body-sm text-center">{error}</p>
         )}
-
-        <div className="pt-space-xs flex items-center justify-between font-code-sm text-code-sm text-outline">
-          <div className="flex items-center gap-1.5">
-            <span className="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
-            <span>AUTH_STATUS: READY</span>
-          </div>
-          <span className="tracking-widest uppercase text-[10px]">PORT: 443_SECURE</span>
-        </div>
       </div>
     </div>
   );

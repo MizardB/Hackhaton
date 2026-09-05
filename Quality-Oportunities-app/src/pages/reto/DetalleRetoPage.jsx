@@ -361,37 +361,13 @@ Backpressure Ctr <- Adaptive Drain Rate Feedback Loop -----`}
                 </div>
               </div>
             </div>
-
-            <div className="w-full bg-surface-container-lowest rounded-lg p-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm shadow-inner text-outline font-code-sm text-code-sm">
-              <div className="flex items-center gap-space-md flex-wrap">
-                <span className="flex items-center gap-space-2xs text-secondary font-medium">
-                  <span className="w-2 h-2 rounded-full bg-secondary inline-block"></span>
-                  SYS NODE: EUR-WEST3-PROD
-                </span>
-                <span>//</span>
-                <span className="text-on-surface-variant">HARNESS_STATUS: <strong className="text-on-surface">READY</strong></span>
-                <span>//</span>
-                <span className="text-on-surface-variant">TELEMETRY LATENCY: <strong className="text-primary font-code-sm">12ms</strong></span>
-              </div>
-              <div>
-                <span>© 2025 Quality Opportunities CORE ARCHITECTURE // ENGINE RUNNER v4.2</span>
-              </div>
-            </div>
           </div>
         </div>
       </main>
 
       <footer className="w-full bg-surface-container-lowest">
         <div className="w-full max-w-container-max mx-auto px-gutter-desktop py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-sm">
-          <div className="flex items-center gap-space-sm">
-            <div className="flex items-center gap-space-2xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              <span className="font-code-sm text-code-sm text-on-surface-variant">SYS NODE: EUR-WEST3-PROD</span>
-            </div>
-            <span className="text-outline-variant font-code-sm text-code-sm">/</span>
-            <span className="font-code-sm text-code-sm text-on-surface-variant">PORTAL V2.4.9</span>
-          </div>
-          <div className="font-code-sm text-code-sm text-outline">© 2024 Quality Opportunities ACADEMY. ALL RIGHTS RESERVED.</div>
+          <div className="font-code-sm text-code-sm text-outline">© 2024 Quality Opportunities</div>
         </div>
       </footer>
     </div>
