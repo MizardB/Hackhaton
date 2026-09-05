@@ -29,13 +29,13 @@ Hackathons · Retos educativos · Empresas · Open Issues · Concursos
 
 ### Problematica
 
-La formación universitaria todavía se apoya en muchos ejercicios académicos aislados que no reproducen las restricciones, decisiones ni fallos de un entorno profesional. Al mismo tiempo, la IA permite producir soluciones cada vez más rápido, por lo que entregar código o un documento terminado ya no demuestra por sí solo que exista comprensión.
+El problema no es que a los estudiantes les falte capacidad. El problema es que gran parte de su aprendizaje queda encerrado en cursos, ejercicios y proyectos que luego dicen poco sobre cómo responden ante una situación cercana al mundo profesional.
 
-El resultado es la paradoja del **“CV en blanco”**: estudiantes con conocimientos y proyectos, pero con poca evidencia verificable de desempeño frente a problemas cercanos al mundo profesional.
+Al llegar al mercado aparece la paradoja del **“CV en blanco”**: para conseguir experiencia se pide experiencia, pero sin una primera oportunidad real es difícil producir evidencia que merezca confianza.
 
-Las oportunidades para obtener esa experiencia sí existen, pero suelen estar **fragmentadas** entre hackathons, datathons, programas universitarios, concursos, retos empresariales, comunidades y plataformas externas. Incluso cuando el estudiante participa, la evidencia suele quedar repartida entre certificados, repositorios, presentaciones y enlaces difíciles de interpretar rápidamente.
+La IA vuelve esta diferencia todavía más visible. Generar código, análisis o propuestas es cada vez más accesible; por eso el valor ya no está solo en entregar una respuesta, sino en **comprenderla, adaptarla, detectar sus fallos y defender las decisiones tomadas**.
 
-Quality Opportunities conecta esos dos problemas: **descubrimiento de oportunidades + evidencia de capacidad**.
+Las oportunidades para practicar sí existen —hackathons, retos empresariales, programas universitarios, open issues y concursos— pero están dispersas, vencen y muchas veces no terminan convertidas en una evidencia profesional acumulativa. **QO nace para conectar esas oportunidades con una forma clara de demostrar capacidad.**
 
 ### Usuario Objetivo
 
