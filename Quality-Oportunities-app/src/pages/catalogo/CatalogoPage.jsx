@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { RETOS } from '../../types/reto.js';
+import { useRetos } from '../../service/useRetos.js';
 
 const ESTADOS = [
   { clave: 'todos', etiqueta: 'TODOS' },
@@ -10,6 +10,9 @@ const ESTADOS = [
 export default function CatalogoPage({ onSelectReto }) {
   const [filtroEstado, setFiltroEstado] = useState('todos');
   const [busqueda, setBusqueda] = useState('');
+  // Catalogo real: la lista llega vacia en el primer render y se rellena al responder la API.
+  const { obtenerRetos } = useRetos();
+  const RETOS = obtenerRetos();
 
   const retosFiltrados = useMemo(() => {
     return RETOS.filter((reto) => {
@@ -21,7 +24,7 @@ export default function CatalogoPage({ onSelectReto }) {
         reto.org.toLowerCase().includes(busqueda.toLowerCase());
       return coincideEstado && coincideBusqueda;
     });
-  }, [filtroEstado, busqueda]);
+  }, [filtroEstado, busqueda, RETOS]);
 
   return (
     <div className="min-h-screen bg-surface text-on-surface antialiased">
