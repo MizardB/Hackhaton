@@ -251,55 +251,7 @@ Repetir retos casi idénticos aporta valor marginal decreciente; el CV destaca l
 
 ---
 
-## 7. Modelo de Negocio y Alianzas
-
-Quality Opportunities es una plataforma educativa y de evidencia, **no una bolsa de empleo**. Una contratación puede ser una consecuencia de demostrar capacidad, pero no es el producto central.
-
-| Segmento | Modelo |
-| :--- | :--- |
-| **Estudiantes — Free** | Acceso a retos, evaluación base y construcción de evidencia. |
-| **Estudiantes — Pro** | Tutor IA Socrático, scorecards avanzados, telemetría, defensa adaptativa y visor Diff. |
-| **Empresas — B2B** | Publicación o sanitización de retos, patrocinio, employer branding y acceso a evidencia de participantes que resolvieron sus desafíos. |
-| **Open Issues / Partnerships** | Promoción e integración de concursos, hackathons, datathons o challenges alojados en plataformas externas. |
-| **Universidades — B2U** | Integración curricular y uso institucional de retos y evidencia de aprendizaje aplicado. |
-
-La propuesta plantea un Plan Pro de referencia de **S/. 12 por reto o S/. 35 al mes** y una futura licencia institucional para universidades.
-
-### ¿Por qué participa una empresa?
-
-Una organización no necesita regalar su propiedad intelectual ni garantizar contratación. Puede convertir una problemática en un reto seguro, **mantener su marca cuando lo desee y observar cómo distintos participantes resuelven un contexto relevante antes de invertir tiempo en procesos más costosos de evaluación**.
-
-Si ya posee un concurso o challenge en su propia web, QO tampoco necesita duplicarlo: puede incorporarlo al HUB mediante promoción, partnership o integración y redirigir al sitio oficial.
-
-El retorno puede combinar **employer branding, descubrimiento de talento, experimentación sobre problemas no críticos y distribución de oportunidades existentes**.
-
----
-
-## 8. Estrategia de Arranque
-
-El sistema no necesita esperar a conseguir grandes alianzas para funcionar.
-
-La primera fase puede comenzar con **Retos Educativos Curados** construidos mediante investigación de mercado, entrevistas con profesionales senior, postmortems, documentación pública y proyectos open source. Conforme crezcan las relaciones externas, el catálogo incorpora **Retos Empresariales Sanitizados** y **Open Issues**.
-
-```text
-FASE DE ARRANQUE
-Retos curados
-      |
-      v
-Evidencia + usuarios
-      |
-      v
-Retos empresariales sanitizados
-      |
-      v
-Open Issues + partnerships + ecosistema externo
-```
-
-Esto reduce el problema de *cold start*: el valor para el estudiante puede existir antes de que la plataforma alcance escala empresarial.
-
----
-
-## 9. Escalabilidad y Evolución del Ecosistema
+## 7. Escalabilidad y Evolución del Ecosistema
 
 El MVP valida una hipótesis concreta:
 
@@ -330,54 +282,18 @@ El mecanismo de evaluación cambia con la disciplina: software puede utilizar **
 
 ---
 
-## 10. Guia de Setup y Ejecucion Local
+## 8. Equipo de Desarrollo: SinergIA
 
-> Esta sección se actualizará con los comandos definitivos cuando quede cerrada la estructura final del repositorio.
-
-### Requisitos Previos
-
-- Git
-- Node.js 20+
-- Python 3.11+
-- Docker
-- PostgreSQL
-- Redis
-
-### Clonar el repositorio
-
-```bash
-git clone https://github.com/MizardB/Hackhaton.git
-cd Hackhaton
-```
-
-### Flujo esperado de desarrollo
-
-```bash
-# Frontend
-npm install
-npm run dev
-
-# Backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
-
-> Los paths y comandos exactos pueden variar mientras se consolida la arquitectura del MVP.
+| Nombre | GitHub |
+| :--- | :--- |
+| **Manuel Aranda (Manu)** | [@MizardB](https://github.com/MizardB) |
+| **Miguel** | [@Miguel-Ghost](https://github.com/Miguel-Ghost) |
+| **Brian** | [@BrianJY-14](https://github.com/BrianJY-14) |
+| **Alex** | [@josealexandromartinezcox-stack](https://github.com/josealexandromartinezcox-stack) |
 
 ---
 
-## 11. Equipo de Desarrollo: SinergIA
-
-| N° | Integrante | Especialidad | Rol en el Proyecto | Perfil GitHub | Foco Operativo |
-| :---: | :--- | :---: | :--- | :--- | :--- |
-| **01** | **Manuel Aranda (Manu)** | **M6** (Mecatronica) | **Team Leader, AI Architect, PM & Pitch Lead** | [@MizardB](https://github.com/MizardB) | Direccion, Arquitectura IA/C2, Gobernanza Git, Despliegue Cloud y Pitch. |
-| **02** | **Miguel** | **I2** (Sistemas) | **Frontend Lead (UI/UX & Client Core)** | [@Miguel-Ghost](https://github.com/Miguel-Ghost) | Desarrollo de interfaz, integracion con APIs, responsive design y UX. |
-| **03** | **Brian** | **I2** (Sistemas) | **Backend Lead (API, DB & Services)** | [@BrianJY-14](https://github.com/BrianJY-14) | Construccion de endpoints, logica de negocio, pipeline de datos e integracion de IA. |
-| **04** | **Alex** | **M6** (Mecatronica) | **QA & Testing Lead (Automation & Quality)** | [@josealexandromartinezcox-stack](https://github.com/josealexandromartinezcox-stack) | Suite de pruebas automaticas, validacion de edge cases, stress testing y smoke testing. |
-
----
-
-## 12. Vision
+## 9. Vision
 
 **Quality Opportunities quiere convertir oportunidades dispersas en experiencias accesibles y el aprendizaje aplicado en evidencia.**
 
