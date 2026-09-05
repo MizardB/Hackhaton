@@ -252,21 +252,9 @@ El mecanismo de evaluación cambia con la disciplina: software puede utilizar **
 
 ---
 
-## 7. Equipo de Desarrollo: SinergIA
+**Créditos — SinergIA**  
+[Manuel Aranda (Manu)](https://github.com/MizardB) · [Miguel](https://github.com/Miguel-Ghost) · [Brian](https://github.com/BrianJY-14) · [Alex](https://github.com/josealexandromartinezcox-stack)
 
-| Nombre | GitHub |
-| :--- | :--- |
-| **Manuel Aranda (Manu)** | [@MizardB](https://github.com/MizardB) |
-| **Miguel** | [@Miguel-Ghost](https://github.com/Miguel-Ghost) |
-| **Brian** | [@BrianJY-14](https://github.com/BrianJY-14) |
-| **Alex** | [@josealexandromartinezcox-stack](https://github.com/josealexandromartinezcox-stack) |
+*Quality Opportunities quiere convertir oportunidades dispersas en experiencias accesibles y el aprendizaje aplicado en evidencia, construyendo una identidad profesional basada en lo que una persona puede demostrar, explicar y defender.*
 
----
-
-## 8. Vision
-
-**Quality Opportunities quiere convertir oportunidades dispersas en experiencias accesibles y el aprendizaje aplicado en evidencia.**
-
-Una persona puede entrar por una sola oportunidad —un reto educativo, una problemática empresarial o un challenge abierto— y terminar construyendo una identidad profesional basada menos en lo que afirma saber y más en **lo que puede demostrar, explicar y defender**.
-
-> **HUB → RETO → EVIDENCIA.** Todo lo demás existe para hacer esa cadena más útil, confiable y escalable.
+> **HUB → RETO → EVIDENCIA.**
