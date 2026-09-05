@@ -101,20 +101,7 @@ Esto permite que una empresa participe sin reconstruir una convocatoria que ya p
 
 ---
 
-## 2. Enlaces de Acceso y Entregables Oficiales
-
-| Entregable | Enlace / Ubicacion | Estado |
-| :--- | :--- | :--- |
-| **Demo en Produccion** | Pendiente de URL final | En desarrollo |
-| **Repositorio Principal** | `MizardB/Hackhaton` | Activo |
-| **Arquitectura Macro (C2)** | Pendiente de documentación final | En desarrollo |
-| **Deck de Presentacion** | Pendiente de carga al repositorio | En desarrollo |
-| **Release Fase 1** | Tag GitHub por definir | Pendiente |
-| **Release Fase 2** | Tag GitHub por definir | Pendiente |
-
----
-
-## 3. Arquitectura Conceptual
+## 2. Arquitectura Conceptual
 
 ```text
 Empresa / Docente / Comunidad / QO / Plataforma externa
@@ -155,7 +142,7 @@ Empresa / Docente / Comunidad / QO / Plataforma externa
 
 ---
 
-## 4. Stack Tecnologico e Inteligencia Artificial
+## 3. Stack Tecnologico e Inteligencia Artificial
 
 | Capa | Tecnologia / Servicio | Justificacion Tecnica |
 | :--- | :--- | :--- |
@@ -194,7 +181,7 @@ Al cierre de un reto, el estudiante puede comparar su implementación con una so
 
 ---
 
-## 5. Evaluacion Tecnica y Testing
+## 4. Evaluacion Tecnica y Testing
 
 QO busca **comprobar que una solución realmente funciona bajo criterios claros y repetibles**. En software, esta comprobación puede ejecutarse automáticamente en un entorno aislado —sandbox— y adaptarse a lo que cada reto necesita medir.
 
@@ -218,7 +205,7 @@ Para la demo del MVP priorizamos dos señales que un jurado puede comprender inm
 
 ---
 
-## 6. Proof-of-Work: Evidencia, Insignia y CV Dinamico
+## 5. Proof-of-Work: Evidencia, Insignia y CV Dinamico
 
 El producto no termina cuando un reto aparece como “completado”. El resultado importante es una **evidencia profesional explorable**: el Proof-of-Work que respalda lo que el estudiante afirma saber hacer.
 
@@ -251,7 +238,7 @@ Repetir retos casi idénticos aporta valor marginal decreciente; el CV destaca l
 
 ---
 
-## 7. Escalabilidad y Evolución del Ecosistema
+## 6. Escalabilidad y Evolución del Ecosistema
 
 El MVP valida una hipótesis concreta:
 
@@ -282,7 +269,7 @@ El mecanismo de evaluación cambia con la disciplina: software puede utilizar **
 
 ---
 
-## 8. Equipo de Desarrollo: SinergIA
+## 7. Equipo de Desarrollo: SinergIA
 
 | Nombre | GitHub |
 | :--- | :--- |
@@ -293,7 +280,7 @@ El mecanismo de evaluación cambia con la disciplina: software puede utilizar **
 
 ---
 
-## 9. Vision
+## 8. Vision
 
 **Quality Opportunities quiere convertir oportunidades dispersas en experiencias accesibles y el aprendizaje aplicado en evidencia.**
 
