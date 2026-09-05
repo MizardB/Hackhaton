@@ -107,41 +107,26 @@ Esto permite que una empresa participe sin reconstruir una convocatoria que ya p
 
 ## 2. Arquitectura Conceptual
 
-```text
-Empresa / Docente / Comunidad / QO / Plataforma externa
-                         |
-                         v
-                 Reto u oportunidad
-                         |
-                         v
-              Estudiante en Quality Opportunities
-                         |
-              +----------+----------+
-              |                     |
-              v                     v
-       IA / documentación      Implementación /
-       herramientas modernas     artefacto
-                                      |
-                                      v
-                           Comprobación reproducible
-                                      |
-                           +----------+----------+
-                           |                     |
-                           v                     v
-                    Caso normal /          Caso crítico /
-                    Happy Path             Critical Case
-                           |                     |
-                           +----------+----------+
-                                      |
-                                      v
-                         Defensa cuando corresponda
-                                      |
-                                      v
-                              Proof-of-Work
-                                      |
-                                      v
-                 CV Dinámico / Mapa de habilidades
-                              (Skill Graph)
+```mermaid
+flowchart TD
+    A["Empresa / Docente / Comunidad / QO / Plataforma externa"]
+    A --> B["Reto u oportunidad"]
+    B --> C["Estudiante en Quality Opportunities"]
+
+    C --> D["IA / documentación<br/>herramientas modernas"]
+    C --> E["Implementación /<br/>artefacto"]
+
+    D --> F["Comprobación reproducible"]
+    E --> F
+
+    F --> G["Caso normal /<br/>Happy Path"]
+    F --> H["Caso crítico /<br/>Critical Case"]
+
+    G --> I["Defensa cuando corresponda"]
+    H --> I
+
+    I --> J["Proof-of-Work"]
+    J --> K["CV Dinámico / Mapa de habilidades<br/>(Skill Graph)"]
 ```
 
 ---
