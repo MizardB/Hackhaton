@@ -1,21 +1,29 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import AccesoPage from './pages/acceso/AccesoPage.jsx';
+import CatalogoPage from './pages/catalogo/CatalogoPage.jsx';
+import DetalleRetoPage from './pages/reto/DetalleRetoPage.jsx';
+import EspacioTrabajoPage from './pages/espacio/EspacioTrabajoPage.jsx';
+import ResultadoPage from './pages/resultado/ResultadoPage.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [route, setRoute] = useState('acceso');
 
-  return (
-    <>
-      <div>
-         <h1 class="text-3xl font-bold underline">
-            Hello world!
-        </h1>
-      </div>
-    </>
-  )
+  const renderPage = () => {
+    switch (route) {
+      case 'acceso':
+        return <AccesoPage onLogin={() => setRoute('catalogo')} />;
+      case 'catalogo':
+        return <CatalogoPage onSelectReto={() => setRoute('detalle')} />;
+      case 'detalle':
+        return <DetalleRetoPage onIniciar={() => setRoute('espacio')} />;
+      case 'espacio':
+        return <EspacioTrabajoPage onEnviar={() => setRoute('resultado')} />;
+      case 'resultado':
+        return <ResultadoPage onVolver={() => setRoute('catalogo')} />;
+      default:
+        return <AccesoPage onLogin={() => setRoute('catalogo')} />;
+    }
+  };
+
+  return <div className="min-h-screen bg-background text-on-surface">{renderPage()}</div>;
 }
-
-export default App
