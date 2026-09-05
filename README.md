@@ -33,13 +33,9 @@ Hackathons · Retos educativos · Empresas · Open Issues · Concursos
 
 ### Problematica
 
-El problema no es que a los estudiantes les falte capacidad. El problema es que gran parte de su aprendizaje queda encerrado en cursos, ejercicios y proyectos que luego dicen poco sobre cómo responden ante una situación cercana al mundo profesional.
+El problema no es la falta de capacidad, sino la falta de evidencia. Gran parte del aprendizaje universitario queda encerrado en cursos y proyectos que dicen poco sobre cómo responde un estudiante ante situaciones cercanas al mundo profesional. Al llegar al mercado aparece la paradoja del **“CV en blanco”**: para conseguir experiencia se pide experiencia, pero sin una primera oportunidad es difícil producir evidencia que merezca confianza.
 
-Al llegar al mercado aparece la paradoja del **“CV en blanco”**: para conseguir experiencia se pide experiencia, pero sin una primera oportunidad real es difícil producir evidencia que merezca confianza.
-
-La IA vuelve esta diferencia todavía más visible. Generar código, análisis o propuestas es cada vez más accesible; por eso el valor ya no está solo en entregar una respuesta, sino en **comprenderla, adaptarla, detectar sus fallos y defender las decisiones tomadas**.
-
-Las oportunidades para practicar sí existen —hackathons, retos empresariales, programas universitarios, open issues y concursos— pero están dispersas, vencen y muchas veces no terminan convertidas en una evidencia profesional acumulativa. **QO nace para conectar esas oportunidades con una forma clara de demostrar capacidad.**
+La IA hace esta brecha más visible: generar código, análisis o propuestas es cada vez más accesible, así que el valor está en **comprender, adaptar, detectar fallos y defender decisiones**. Las oportunidades para demostrarlo —hackathons, retos empresariales, programas universitarios, open issues y concursos— existen, pero están dispersas y rara vez se convierten en evidencia profesional acumulativa. **QO nace para conectar esas oportunidades con una forma clara de demostrar capacidad.**
 
 ### Usuario Objetivo
 
