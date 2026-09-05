@@ -277,18 +277,45 @@ El MVP valida primero la hipótesis central: convertir resolución de retos en *
 
 ### 9.1 Escalabilidad Multidisciplinaria
 
-El MVP comienza en **desarrollo de software** porque permite automatizar con rapidez la evaluación mediante tests, telemetría y entornos reproducibles. Sin embargo, la arquitectura conceptual de Quality Opportunities no está limitada al software.
+El MVP comienza en **desarrollo de software** porque permite automatizar con rapidez la evaluación mediante tests, telemetría y entornos reproducibles. Sin embargo, la arquitectura conceptual de Quality Opportunities está pensada como un marco general para demostrar aprendizaje aplicado en múltiples campos.
 
-El modelo puede extenderse hacia:
+En lugar de agrupar todas las carreras bajo una sola etiqueta, la expansión puede organizarse por familias de disciplinas:
 
-- **Ingeniería de Datos:** pipelines, streaming, calidad y procesamiento distribuido.
+#### Tecnología, Ingeniería y Ciencias Aplicadas
+
+- **Ingeniería de Software y Computación:** arquitectura, concurrencia, rendimiento, testing y sistemas distribuidos.
+- **Ingeniería de Datos e IA:** pipelines, modelos, calidad de datos, experimentación y procesamiento distribuido.
 - **Ciberseguridad:** hardening, análisis de vulnerabilidades y respuesta ante incidentes simulados.
 - **Mecatrónica y Robótica:** control, percepción, simulación, ROS, planificación y desempeño de sistemas.
 - **Electrónica:** diseño, simulación, diagnóstico y validación de circuitos.
-- **Diseño e Ingeniería Mecánica:** optimización, simulación, manufacturabilidad y toma de decisiones de diseño.
-- **Otras disciplinas técnicas:** siempre que exista una forma clara de definir un reto, registrar evidencia y evaluar el dominio demostrado.
+- **Ingeniería Mecánica, Industrial y otras ingenierías:** optimización, manufacturabilidad, procesos, simulación y toma de decisiones técnicas.
 
-Software es, por tanto, **la primera vertical de validación, no el límite de la plataforma**.
+#### Diseño, Arquitectura y Disciplinas Creativas Aplicadas
+
+- **Diseño de Producto y UX/UI:** investigación de usuario, prototipado, accesibilidad, sistemas de diseño y defensa de decisiones.
+- **Arquitectura y Urbanismo:** propuestas espaciales, restricciones de uso, sostenibilidad, planificación y evaluación de alternativas.
+- **Comunicación Visual y Diseño Gráfico:** construcción de sistemas visuales, campañas, identidad y justificación estratégica de soluciones.
+- **Producción audiovisual y medios digitales:** narrativa, producción, edición y resolución de briefs con criterios verificables.
+
+#### Negocios, Gestión y Emprendimiento
+
+- **Administración y Estrategia:** resolución de casos empresariales, priorización, análisis competitivo y planes de ejecución.
+- **Economía y Finanzas:** modelamiento, evaluación de escenarios, análisis de riesgo y toma de decisiones basada en evidencia.
+- **Marketing y Growth:** diseño de campañas, experimentación, segmentación, métricas y análisis de resultados.
+- **Emprendimiento e Innovación:** validación de problemas, propuesta de valor, experimentos de mercado y defensa de hipótesis.
+- **Operaciones y Supply Chain:** optimización de procesos, planificación, simulación y respuesta ante restricciones.
+
+#### Derecho, Políticas Públicas y Ciencias Sociales Aplicadas
+
+- **Derecho:** análisis de casos, legal research, redacción de argumentos, negociación, compliance y resolución de retos jurídicos simulados o competitivos.
+- **Políticas Públicas:** diseño de intervenciones, análisis regulatorio, evaluación de impacto y defensa de propuestas.
+- **Relaciones Internacionales y Gestión Pública:** negociación, análisis de escenarios, formulación de estrategias y resolución de casos complejos.
+- **Psicología Organizacional y Ciencias del Comportamiento:** diseño de intervenciones, análisis de casos, investigación aplicada y evaluación de resultados.
+- **Comunicación, Periodismo e Investigación Social:** verificación de información, análisis de fuentes, construcción de argumentos y producción de entregables auditables.
+
+El mecanismo de evaluación no tiene por qué ser idéntico en todas las áreas. En software puede predominar la telemetría y los tests automáticos; en diseño puede evaluarse el proceso, los artefactos y la defensa; en negocios, la calidad del análisis y las métricas; y en Derecho, la solidez de la investigación, argumentación y respuesta ante un caso.
+
+Software es, por tanto, **la primera vertical de validación, no el límite de la plataforma**. La condición para incorporar una nueva disciplina es que pueda definirse un reto, producir evidencia observable y evaluar si el estudiante comprende y puede defender su trabajo.
 
 ### 9.2 Escalabilidad de Fuentes de Retos
 
@@ -345,8 +372,9 @@ La plataforma puede así funcionar no solo como creadora de experiencias, sino c
 3. **Fase 3 — Nuevas disciplinas y ecosistema externo**
    - Ciberseguridad.
    - Ingeniería y robótica.
-   - Retos externos y partnerships.
-   - Expansión del estándar de retos e insignias.
+   - Diseño, negocios y retos de ciencias sociales aplicadas.
+   - Retos jurídicos, competencias y desafíos profesionales externos.
+   - Partnerships y expansión del estándar de retos e insignias.
 
 ---
 
