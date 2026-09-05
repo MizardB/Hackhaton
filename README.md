@@ -29,13 +29,13 @@ Hackathons · Retos educativos · Empresas · Open Issues · Concursos
 
 ### Problematica
 
-El problema no es que a los estudiantes les falte capacidad. El problema es que gran parte de su aprendizaje queda encerrado en cursos, ejercicios y proyectos que luego dicen poco sobre cómo responden ante una situación cercana al mundo profesional.
+La formación universitaria todavía se apoya en muchos ejercicios académicos aislados que no reproducen las restricciones, decisiones ni fallos de un entorno profesional. Al mismo tiempo, la IA permite producir soluciones cada vez más rápido, por lo que entregar código o un documento terminado ya no demuestra por sí solo que exista comprensión.
 
-Al llegar al mercado aparece la paradoja del **“CV en blanco”**: para conseguir experiencia se pide experiencia, pero sin una primera oportunidad real es difícil producir evidencia que merezca confianza.
+El resultado es la paradoja del **“CV en blanco”**: estudiantes con conocimientos y proyectos, pero con poca evidencia verificable de desempeño frente a problemas cercanos al mundo profesional.
 
-La IA vuelve esta diferencia todavía más visible. Generar código, análisis o propuestas es cada vez más accesible; por eso el valor ya no está solo en entregar una respuesta, sino en **comprenderla, adaptarla, detectar sus fallos y defender las decisiones tomadas**.
+Las oportunidades para obtener esa experiencia sí existen, pero suelen estar **fragmentadas** entre hackathons, datathons, programas universitarios, concursos, retos empresariales, comunidades y plataformas externas. Incluso cuando el estudiante participa, la evidencia suele quedar repartida entre certificados, repositorios, presentaciones y enlaces difíciles de interpretar rápidamente.
 
-Las oportunidades para practicar sí existen —hackathons, retos empresariales, programas universitarios, open issues y concursos— pero están dispersas, vencen y muchas veces no terminan convertidas en una evidencia profesional acumulativa. **QO nace para conectar esas oportunidades con una forma clara de demostrar capacidad.**
+Quality Opportunities conecta esos dos problemas: **descubrimiento de oportunidades + evidencia de capacidad**.
 
 ### Usuario Objetivo
 
@@ -173,8 +173,6 @@ Empresa / Docente / Comunidad / QO / Plataforma externa
 ### IA como herramienta de aprendizaje
 
 Quality Opportunities **no penaliza el uso de Inteligencia Artificial**. La plataforma parte de que los futuros profesionales trabajarán junto a herramientas de IA y que saber utilizarlas correctamente también es una competencia.
-
-Existe evidencia experimental que respalda la necesidad de diferenciar **asistencia** de **comprensión**. Bastani et al. (2025), en un experimento de campo con cerca de mil estudiantes de secundaria en matemáticas, encontraron que el acceso a GPT-4 sin salvaguardas mejoraba el desempeño durante la práctica, pero el grupo obtuvo resultados **17% menores** que el control cuando luego rindió una evaluación sin IA; un tutor con guardrails eliminó prácticamente ese efecto negativo [4]. QO no extrapola ese porcentaje directamente a universitarios de software: lo utiliza como respaldo para diseñar una experiencia donde la IA ayude sin sustituir la capacidad de explicar y defender el trabajo.
 
 La evaluación se desplaza desde:
 
@@ -386,17 +384,3 @@ uvicorn main:app --reload
 Una persona puede entrar por una sola oportunidad —un reto educativo, una problemática empresarial o un challenge abierto— y terminar construyendo una identidad profesional basada menos en lo que afirma saber y más en **lo que puede demostrar, explicar y defender**.
 
 > **HUB → RETO → EVIDENCIA.** Todo lo demás existe para hacer esa cadena más útil, confiable y escalable.
-
----
-
-## 13. Referencias y Evidencia
-
-La bibliografía se mantiene deliberadamente **selectiva**: cada fuente respalda una afirmación concreta del problema o demuestra que el mecanismo de retos abiertos/empresariales ya existe en el contexto peruano. Evitamos usar blogs o cifras secundarias cuando existe una fuente institucional o académica más sólida.
-
-1. **Ministerio de Trabajo y Promoción del Empleo — MTPE.** (2023). *Presupuesto 2024 del MTPE dará énfasis a empleabilidad y promoción del empleo para los más jóvenes.* Reporta que, para 2022, 64,7% de jóvenes ocupados con educación superior universitaria culminada se encontraba en inadecuación ocupacional. https://www.gob.pe/institucion/mtpe/noticias/849642-ministro-daniel-maurate-presupuesto-2024-del-mtpe-dara-enfasis-a-empleabilidad-y-promocion-del-empleo-para-los-mas-jovenes
-2. **Ministerio de Trabajo y Promoción del Empleo — MTPE.** (2024). *MTPE y Cisco presentan cursos gratuitos en competencias digitales para aumentar la empleabilidad de jóvenes.* Señala que más del 75% de empresas en el Perú no logra cubrir sus vacantes digitales. https://www.gob.pe/institucion/mtpe/noticias/923891-mtpe-y-cisco-presentan-cursos-gratuitos-en-competencias-digitales-para-aumentar-la-empleabilidad-de-jovenes
-3. **ManpowerGroup Perú.** (2024). *Encuesta de Expectativa de Empleo Q1 2024 — Perú.* Encuesta a 525 empleadores peruanos: 65% reportó dificultades para encontrar talento con las habilidades requeridas; TI y Datos aparece como el grupo de habilidades más difícil de encontrar. https://www.manpowergroup.pe/wps/wcm/connect/manpowergroup/fab54ae6-cd45-4522-9414-48daba29c1ef/PERU_ES_MEOS_Report_1Q2024.pdf?MOD=AJPERES
-4. **Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R.** (2025). *Generative AI without guardrails can harm learning: Evidence from high school mathematics.* Proceedings of the National Academy of Sciences, 122(26), e2422633122. https://doi.org/10.1073/pnas.2422633122
-5. **BBVA Perú.** (2022). *BBVA impulsa la innovación en Perú a través de la Hackathon “WeCode”.* Documenta el uso de un reto tecnológico para resolver una necesidad real y atraer/identificar talento tech. https://www.bbva.com/es/pe/innovacion/bbva-impulsa-la-innovacion-en-peru-a-traves-de-la-hackathon-wecode/
-6. **Universidad de Lima.** (2024). *Innovathon Ulima 2024.* Iniciativa coorganizada con Yape con retos sobre transporte, acceso al crédito y educación/primera oportunidad laboral, desarrollados por equipos multidisciplinarios. https://www.ulima.edu.pe/departamento/centro-de-emprendimiento/agenda/innovathon-ulima-2024
-7. **Programa Nacional de Innovación y Desarrollo Productivo — ProInnóvate.** (2025). *Concurso Innovación Abierta 2025.* Programa de co-creación en el que medianas y grandes empresas identifican y priorizan problemas u oportunidades empresariales para desarrollar soluciones con entidades externas. https://www.gob.pe/institucion/proinnovate/campa%C3%B1as/89140-concurso-innovacion-abierta-2025
