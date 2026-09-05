@@ -91,11 +91,10 @@ Esto permite que una empresa participe sin reconstruir una convocatoria que ya p
 
 ### Ejemplos de Retos
 
-- **Flash Sale Inventory:** evitar inconsistencias cuando varios usuarios intentan adquirir simultáneamente la última unidad disponible.
-- **Duplicate Transaction:** impedir que una operación se procese dos veces ante reintentos de red.
-- **Dirty Data Pipeline:** consolidar información proveniente de múltiples fuentes con registros inconsistentes sin perder datos válidos.
-- **Slow Endpoint:** diagnosticar y mejorar un servicio cuya latencia se degrada bajo carga.
-- **Architecture Review:** detectar fallos en una solución construida parcialmente con IA y defender técnicamente las correcciones realizadas.
+- **Idempotencia y Race Conditions en Pasarela de Pagos:** evitar cobros duplicados bajo concurrencia.
+- **Mitigación de Picos de Tráfico y Rate Limiting:** controlar ráfagas de tráfico sin saturar servicios.
+- **Pipeline ETL Asíncrono y Sanitización de Datos:** limpiar grandes volúmenes de datos de forma segura.
+- **Diagnóstico y Refactor de Memory Leak Generado por IA:** detectar y corregir fugas de memoria.
 
 ---
 
