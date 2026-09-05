@@ -1,341 +1,535 @@
-# Arquitectura de Software y Diseño de Sistema — Quality Opportunities
+# Arquitectura del Sistema y Base de Datos — Quality Opportunities
 
-> **Proyecto:** Quality Opportunities  
-> **Equipo:** SinergIA  
-> **Track:** Future of Education — Software Week 2026 (UNI)  
-> **Fase:** 1 (Arquitectura, Setup y Modelo Técnico)  
-> **Versión:** 1.1.0  
-> **Estado:** Consolidado y Aprobado  
+> Ecosistema educativo basado en retos de producción (**retos de aprendizaje**) y **Prueba de Trabajo**. Este documento consolida la arquitectura técnica de la plataforma y el modelo de datos: estructura de módulos, diagramas de interacción, entidades, clases UML e integración con APIs e IA.
 
 ---
 
-## 1. Resumen Ejecutivo y Principios de Diseño
+## 1. Resumen Ejecutivo
 
-**Quality Opportunities** es un ecosistema educativo basado en retos de producción (**learning challenges**) y **Prueba de Trabajo Técnica (Proof-of-Work)**, diseñado para que estudiantes universitarios acrediten experiencia de ingeniería real directamente verificable por empresas contratantes.
-
-### Principios Arquitectónicos Fundamentales
-1. **Desacoplamiento Estricto por Capas (C2):** Separación nítida entre la capa de presentación (Next.js + Monaco Editor), la capa de orquestación de servicios (FastAPI), el motor de evaluación de alto rendimiento (Test Runner Engine) y los servicios de apoyo pedagógico (Tutor IA Socrático).
-2. **Evaluación Determinista en Tiempo Polinomial (P vs. NP):** La síntesis de código de concurrencia es compleja (espacio NP), pero la verificación de invariantes bajo estrés y telemetría es determinista (tiempo P).
-3. **Feedback en Tiempo Real (< 3 segundos):** Ejecución de más de 50 pruebas automatizadas (concurrencia > 1,000 req/s, latencia p95 < 50ms, memory leaks) sin sobrecarga de arranque en frío.
-4. **Pedagogía Socrática con Cero Generación de Código:** El Tutor IA orienta al estudiante mediante el análisis de AST y preguntas de arquitectura, con la directiva inquebrantable de jamás proveer código funcional resuelto.
-5. **Inmutabilidad Criptográfica:** Cada reto aprobado culmina en **La Insignia**, una credencial digital respaldada por un hash SHA-256 inmutable verificable públicamente con un clic.
+El presente documento describe la arquitectura técnica de la plataforma **Quality Opportunities**; un ecosistema educativo basado en retos de producción y prueba de trabajo, orientado a que los estudiantes universitarios acrediten experiencia real de ingeniería en su currículum. Se detalla la estructura de módulos, la comunicación entre la capa de presentación y la capa de servicios, el modelo de datos relacional y clases del backend, y la integración con inteligencia artificial y servicios externos.
 
 ---
 
-## 2. Diagrama de Contenedores (Nivel C2)
+## 2. Resumen de la Arquitectura
+
+La plataforma sigue un esquema **por capas y módulos desacoplados**. Las empresas publican retos de optimización y deuda técnica; los estudiantes los resuelven en un **entorno de pruebas aislado** y cada entrega se somete a más de 50 pruebas automatizadas de rendimiento. Al validarse la solución, se emite **La Insignia**: una microcredencial inmutable con resumen criptográfico **SHA-256**, verificable públicamente e incrustable en el currículum del estudiante.
+
+**Principios arquitectónicos:**
+
+- Separación estricta de responsabilidades por capas.
+- Comunicación **sin estado** mediante interfaces REST sobre HTTPS/JSON, con contratos validados de extremo a extremo.
+- Evaluación **objetiva y reproducible** mediante contenedores efímeros con límites de procesador y memoria (grupos de control, *cgroups*).
+- Inteligencia artificial **pedagógica**: orienta mediante el método socrático y **jamás genera código funcional** ni resuelve el reto por el estudiante.
+
+---
+
+## 3. Diagrama General del Sistema
 
 ```mermaid
-graph TB
-    subgraph ACTORES["Actores Externos"]
-        EST["👨‍💻 Estudiante<br/>(Navegador Web)"]
-        REC["👔 Reclutador / Empresa<br/>(Verificación Pública)"]
-        EMP["🏢 Empresa Aliada<br/>(Publicación de Retos / SLAs)"]
-        GH["🐙 GitHub API<br/>(Webhooks / Commits)"]
+flowchart TB
+    Estudiante["Estudiante<br/>(5.º a 9.º ciclo)"]
+    Empresa["Empresa<br/>(publica retos)"]
+
+    subgraph PRESENTACION["CAPA DE PRESENTACIÓN · React / Next.js + Tailwind CSS"]
+        WebUI["Aplicación web"]
+        Monaco["Monaco Editor<br/>(edición y visor de diferencias)"]
     end
 
-    subgraph PRESENTACION["Capa de Presentación · React / Next.js (Vercel)"]
-        FE["📱 Portal Web & CV Dinámico<br/>Next.js 14 + Tailwind"]
-        IDE["💻 IDE Web & Visor de Diff<br/>Monaco Editor + Consola Telemetría"]
+    subgraph SERVICIOS["CAPA DE SERVICIOS · Python FastAPI + Pydantic"]
+        Gateway["Pasarela de API<br/>(puntos de acceso REST)"]
+        MRetos["Módulo de Retos"]
+        Ranking["Ranking de Insignia"]
+        MInsignia["Módulo La Insignia"]
+        MAprendizaje["Módulo de Aprendizaje"]
     end
 
-    subgraph SERVICIOS["Capa de Servicios · Python FastAPI (Railway)"]
-        GW["⚡ API Gateway & Routers<br/>FastAPI + Pydantic v2"]
-        AUTH["🔐 Módulo de Autenticación<br/>JWT + OAuth GitHub"]
-        CHALLENGE["📋 Gestor de Retos & SLAs<br/>Tickets Corporativos P1/P2"]
-        ORCHESTRATOR["🎯 Orquestador de Envíos<br/>State Machine de Calificación"]
+    subgraph PRUEBAS["ENTORNO DE PRUEBAS"]
+        Contenedores["Contenedores"]
+        Stress["Pruebas de Estrés<br/>&gt;1000 solicitudes/s · percentil 95 &lt; 50 ms · &lt; 3 s"]
     end
 
-    subgraph RUNNER_ENGINE["Entorno de Pruebas · Test Runner Engine"]
-        WORKERS["⚡ Worker Pool Asíncrono<br/>Subprocess / httpx coroutines"]
-        STRESS["🔥 Batería de Estrés & Caos<br/>&gt;1,000 RPS · p95 &lt; 50ms"]
-        TELEMETRY["📊 Recolector de Telemetría<br/>Latency, RSS RAM, Invarianza"]
+    subgraph IA["CAPA DE INTELIGENCIA ARTIFICIAL"]
+        Tutor["Tutor IA"]
+        LLM["Modelo de lenguaje externo"]
     end
 
-    subgraph IA_CORE["Capa de Inteligencia Artificial"]
-        AST_SVC["🔍 Analizador Estático de AST<br/>Detección de antipatrones"]
-        SOCRATIC["🧠 Tutor IA Socrático<br/>LLM + Cache de Prompts"]
-        GATEKEEPER["🛡️ Gatekeeper de Defensa<br/>Clasificación semántica"]
+    subgraph DATOS["CAPA DE DATOS"]
+        PG[("PostgreSQL")]
+        RDS[("Redis")]
     end
 
-    subgraph DATOS["Capa de Persistencia & Caching"]
-        PG[("🗄️ PostgreSQL (Supabase)<br/>Usuarios, Retos, Envíos, Insignias")]
-        RD[("⚡ Redis (Redis Cloud)<br/>Locks SETNX, Queues, Sliding Rate Limits")]
-    end
-
-    %% Relaciones de Entrada
-    EST --> FE
-    EST --> IDE
-    REC --> FE
-    EMP --> GW
-    GH --> GW
-
-    %% Comunicación Front-Back
-    FE <-->|HTTPS / REST| GW
-    IDE <-->|WebSocket / Telemetría en Vivo| GW
-
-    %% Orquestación Interna
-    GW --> AUTH
-    GW --> CHALLENGE
-    GW --> ORCHESTRATOR
-
-    ORCHESTRATOR <-->|1. Pre-flight & Defensa| IA_CORE
-    ORCHESTRATOR <-->|2. Ejecución de Tests| RUNNER_ENGINE
-    ORCHESTRATOR <-->|3. Locks & Rate Limits| RD
-    ORCHESTRATOR <-->|4. Persistencia ACID| PG
-
-    RUNNER_ENGINE --> TELEMETRY
-    TELEMETRY --> ORCHESTRATOR
+    Estudiante --> WebUI
+    Empresa --> Gateway
+    WebUI --> Monaco
+    WebUI -- HTTPS / JSON --> Gateway
+    Gateway --> MRetos
+    MRetos --> Contenedores
+    Contenedores --> Stress
+    Stress --> Ranking
+    Ranking --> MInsignia
+    MInsignia -- insignia verificable --> WebUI
+    Gateway --> Tutor
+    Tutor --> LLM
+    Gateway --> PG
+    Gateway --> RDS
+    Contenedores --> RDS
+    MAprendizaje --> Monaco
 ```
 
 ---
 
-## 3. Matriz de Componentes y Responsabilidades
+## 4. Capas y Módulos
 
-| # | Contenedor / Módulo | Stack Tecnológico | Responsabilidad Primaria | SLA / Límite Operativo |
-| :---: | :--- | :--- | :--- | :--- |
-| **1** | **Frontend Web App** | React 18, Next.js 14, Tailwind CSS | Catálogo de retos, visualizador de credenciales, leaderboard y perfil de CV dinámico con telemetría auditada. | Carga inicial < 1.2s; 100% responsive. |
-| **2** | **IDE Web & Diff Viewer** | Monaco Editor, WebSockets | Edición de código en el navegador con resaltado, consola de ejecución y visor de diferencias (aprendizaje vicario). | Latencia de socket < 25ms; autosave local. |
-| **3** | **API Gateway (Backend)** | Python 3.11, FastAPI, Pydantic v2 | Punto de entrada unificado, autenticación, orquestación del ciclo de vida de envíos y emisión de hashes criptográficos. | Throughput > 1,500 req/s; p95 < 40ms. |
-| **4** | **Test Runner Engine** | Python Asyncio, HTTPX, Memory Profiler | Ejecución en memoria de la suite de 50+ pruebas de estrés concurrentes (>1,000 req/s) e inyección de caos. | Suite completa ejecutada en < 3.0s. |
-| **5** | **Tutor IA & Gatekeeper** | AST Python, LLM API (Gemini/OpenAI) | Detección estática de código bloqueante/alucinado, guía socrática interactiva y validación semántica de la defensa técnica. | Tiempo de respuesta socrática < 1.5s; 0 líneas de código resuelto. |
-| **6** | **Base de Datos Relacional** | PostgreSQL 15 (Supabase Managed) | Persistencia ACID de usuarios, catálogo de retos sanitizados, historial de envíos e insignias emitidas. | RPO = 0; réplica administrada; pooling transaccional. |
-| **7** | **Caché & Locking Distribuido**| Redis 7 (Redis Cloud / In-Memory) | Manejo de distributed locks (`SET NX PX`), almacenamiento de ventanas deslizantes para rate limiting y colas rápidas. | Latencia sub-milisegundo (< 2ms); TTL estricto. |
+### 4.1 Capa de presentación — React / Next.js + Tailwind CSS
+
+| Módulo | Responsabilidad |
+|---|---|
+| **Aplicación web** | Interfaz para estudiantes y empresas: catálogo de retos, currículum dinámico e informes de telemetría. |
+| **Monaco Editor** | Edición de código en el navegador y **visor de diferencias** interactivo entre la implementación del estudiante y la solución óptima. |
+
+### 4.2 Capa de servicios — Python (FastAPI) + Pydantic
+
+| Módulo | Responsabilidad |
+|---|---|
+| **Pasarela de API** | Punto de entrada único; valida los contratos de datos y enruta las peticiones hacia los módulos correspondientes. |
+| **Módulo de Retos** | Gestiona el ciclo de vida del reto: repositorio aislado, datos simulados y especificaciones de rendimiento. |
+| **Ranking de Insignia** | Recibe las métricas del entorno de pruebas, valida los umbrales y calcula la clasificación. |
+| **Módulo La Insignia** | Emite la credencial inmutable: resumen criptográfico SHA-256 de la confirmación de cambios más las métricas de ejecución. |
+| **Módulo de Aprendizaje** | Aprendizaje vicario: sirve la comparación entre el código del estudiante y la solución óptima una vez cerrado el reto. |
+
+### 4.3 Entorno de pruebas
+
+| Módulo | Responsabilidad |
+|---|---|
+| **Contenedores** | Ejecución en contenedores efímeros con límites de procesador y memoria; aislamiento estricto respecto al servidor. |
+| **Pruebas de Estrés** | Más de 50 pruebas automatizadas que evalúan concurrencia (**superior a 1000 solicitudes por segundo**), latencia (**percentil 95 inferior a 50 ms**) y estabilidad de memoria en **menos de 3 segundos**. |
+
+### 4.4 Capa de inteligencia artificial
+
+| Módulo | Responsabilidad |
+|---|---|
+| **Tutor IA** | Asistencia socrática: analiza el árbol de sintaxis abstracta del código y plantea preguntas orientadas a arquitectura y algoritmos. Directiva inquebrantable: nunca genera código. |
+| **Modelo de lenguaje externo** | Servicio de modelos de lenguaje optimizado mediante **caché de indicaciones** para reducir costos de operación. |
+
+### 4.5 Capa de datos
+
+| Motor | Uso |
+|---|---|
+| **PostgreSQL** | Persistencia relacional: retos, envíos, insignias y usuarios. |
+| **Redis** | Colas de evaluación de rendimiento y caché de telemetría. |
 
 ---
 
-## 4. Proceso Integral de Ejecución y Ciclo de Vida (Diagrama de Secuencia)
+## 5. Comunicación entre Capas
+
+La comunicación entre la capa de presentación y la capa de servicios es **asíncrona, sin estado y basada en REST sobre HTTPS/JSON**. Toda petición y respuesta se valida con contratos estrictos definidos mediante Pydantic.
+
+**Puntos de acceso principales:**
+
+```text
+POST /api/retos                          Publicación de un reto (empresa)
+POST /api/envios                         Envío de la solución (estudiante)
+GET  /api/envios/{id}/telemetria         Informe de métricas de la ejecución
+GET  /api/insignias/{resumen}            Verificación pública de La Insignia
+GET  /api/retos/{id}/diferencias         Comparador de código (aprendizaje)
+POST /api/tutor/consultas                Consulta socrática al Tutor IA
+```
+
+---
+
+## 6. Proceso Integral de un Reto
 
 ```mermaid
 sequenceDiagram
     autonumber
     actor Est as Estudiante
-    participant IDE as Monaco Editor (IDE Web)
-    participant API as API Gateway (FastAPI)
-    participant Tutor as Tutor IA & Gatekeeper
-    participant Runner as Test Runner Engine
-    participant DB as PostgreSQL / Redis
-    actor Rec as Reclutador / Empresa
+    participant Web as Aplicación web
+    participant Mon as Monaco Editor
+    participant API as Pasarela de API
+    participant Dat as PostgreSQL / Redis
+    participant San as Entorno de pruebas
+    participant Ran as Ranking de Insignia
+    participant Ins as Módulo La Insignia
+    participant Tut as Tutor IA
 
-    Est->>IDE: Desarrolla solución sobre starter code
-    IDE->>API: POST /api/v1/tutor/pre-flight (envía diff de código)
-    API->>Tutor: Inspecciona AST (detecta llamadas sync o antipatrones)
-    Tutor-->>IDE: Devuelve 2 preguntas de defensa de arquitectura
-    Est->>IDE: Responde justificación de trade-offs técnicos
-    IDE->>API: POST /api/v1/submissions (código + respuestas)
-    API->>Tutor: Valida defensa semántica
-    alt Defensa Rechazada (Comprensión Insuficiente)
-        Tutor-->>IDE: Feedback pedagógico socrático (reintento conceptual)
-    else Defensa Aprobada
-        API->>DB: Registra submission en estado RUNNING
-        API->>Runner: Despacha ejecución con worker aislado
-        Runner->>Runner: 1. Functional DTO Tests (10 tests, ~300ms)
-        Runner->>Runner: 2. Chaos & Edge Tests (15 tests, ~450ms)
-        Runner->>Runner: 3. Mass Concurrency Stress (>1,000 RPS, ~1.2s)
-        Runner->>Runner: 4. Memory Profiling RSS Delta (~400ms)
-        Runner-->>API: Scorecard de Telemetría (latencia, rps, RAM, invariantes)
-        alt Falla SLAs de Producción
-            API->>DB: Actualiza submission (FAILED)
-            API-->>IDE: Informe de telemetría detallado con cuello de botella
-        else Supera SLAs de Producción
-            API->>API: Genera Hash SHA-256 inmutable
-            API->>DB: Persiste Insignia Criptográfica
-            API-->>IDE: Emisión de La Insignia + Desbloqueo de Diff Óptimo
-            Rec->>API: GET /api/v1/verify/{badge_hash}
-            API-->>Rec: Certificado público con telemetría de producción auditable
-        end
+    Est->>Web: Selecciona un reto publicado
+    Web->>Mon: Edita el código en el navegador
+    Mon->>API: Envía la solución (código e identificador del reto)
+    API->>Dat: Registra el envío y encola la evaluación
+    API->>San: Lanza un contenedor efímero con límites de recursos
+    San->>San: Ejecuta más de 50 pruebas de estrés (menos de 3 s)
+    San-->>Ran: Remite las métricas de rendimiento
+    alt Pruebas superadas
+        Ran->>Ins: Solicita la emisión de La Insignia
+        Ins-->>Web: Insignia SHA-256 con enlace público de verificación
+        Web-->>Est: Currículum con experiencia real acreditada
+    else Pruebas no superadas
+        Ran-->>Web: Informe de telemetría con las observaciones
+        Est->>Tut: Realiza una consulta socrática
+        Tut-->>Est: Recibe orientación (nunca código resuelto)
     end
 ```
 
 ---
 
-## 5. Modelo de Datos y Persistencia Relacional
+## 7. Diagrama Entidad-Relación Conceptual
 
-El esquema de base de datos en PostgreSQL garantiza integridad referencial estricta, trazabilidad de telemetría y verificación pública descentralizada:
+> **Alcance:** los tipos SQL, claves foráneas e índices quedan fuera de estos diagramas, por corresponder a la fase de implementación.
+
+**14 entidades · 18 relaciones · Participación individual**
 
 ```mermaid
 erDiagram
-    USERS ||--o{ SUBMISSIONS : "realiza"
-    USERS ||--o{ BADGES : "posee"
-    CHALLENGES ||--o{ SUBMISSIONS : "recibe"
-    CHALLENGES ||--o{ BADGES : "certifica"
-    SUBMISSIONS ||--|| TELEMETRY_METRICS : "produce"
-    SUBMISSIONS ||--o| BADGES : "origina"
-
-    USERS {
-        uuid id PK
-        string email UK
-        string full_name
-        string github_username
-        string university
-        timestamp created_at
+    USUARIO {
+        identificador identificador "PK · propio"
+        texto nombre
+        texto correo
+        texto logo "0..1"
+    }
+    ORGANIZACION {
+        identificador identificador "PK · propio"
+        texto nombre
+        texto descripcion "0..1"
+        texto sitio_web "0..1"
+        texto logo "0..1"
+    }
+    PERFIL_ESTUDIANTE {
+        texto nombre_publico
+        texto biografia "0..1"
+        visibilidad visibilidad
+        texto universidad "0..1"
+        texto carrera "0..1"
+        entero ciclo "0..1"
+    }
+    REPRESENTACION {
+        funcion funcion_autorizada
+        momento momento_inicio
+        momento momento_fin "0..1"
+    }
+    EVENTO_AUDITORIA {
+        identificador identificador "PK · propio"
+        momento momento
+        texto accion
+        resultado resultado
+        origen origen
+        texto referencia_recurso
+        texto detalle_saneado "0..1"
+    }
+    SOLICITUD_RETO {
+        identificador identificador "PK · propio"
+        texto titulo_original
+        texto descripcion_publica
+        texto contenido_original_restringido "0..1"
+        momento momento_recepcion
+        estado estado_preparacion
+        texto modelo_ia "0..1"
+        texto version_instrucciones "0..1"
+        texto resumen_preparacion "0..1"
+        texto detalle_error "0..1"
+    }
+    RETO {
+        identificador identificador "PK · propio"
+        texto titulo
+        texto descripcion
+        texto criterios_aceptacion
+        momento momento_incorporacion
+        estado estado
+        momento momento_publicacion "0..1"
+        momento momento_cierre "0..1"
+        texto repositorio_base "0..1"
+        texto version_base "0..1"
+    }
+    PARTICIPACION {
+        identificador identificador "PK · propio"
+        momento momento_incorporacion
+        estado estado
+    }
+    PRUEBA {
+        identificador identificador "PK · propio"
+        texto nombre
+        categoria categoria
+        booleano obligatoria
+        texto condicion_aprobacion
+        duracion limite_ejecucion "0..1"
+    }
+    ENTREGA {
+        identificador identificador "PK · propio"
+        entero numero_intento
+        momento momento_entrega
+        texto repositorio
+        texto commit
+        texto referencia_ejecutable
+    }
+    EVALUACION {
+        identificador identificador "PK · propio"
+        estado estado_procesamiento
+        momento momento_solicitud
+        momento momento_inicio "0..1"
+        momento momento_fin "0..1"
+        texto version_evaluador
+        texto detalle_error "0..1"
+    }
+    RESULTADO_PRUEBA {
+        condicion condicion_ejecucion
+        booleano aprobada "0..1"
+        decimal valor_observado "0..1"
+        texto unidad "0..1"
+        duracion duracion "0..1"
+        texto detalle "0..1"
+    }
+    CREDENCIAL {
+        identificador identificador_publico "PK · propio"
+        momento momento_emision
+        texto contenido_emitido
+        texto huella_contenido
+    }
+    REVOCACION_CREDENCIAL {
+        momento momento_revocacion
+        texto motivo
     }
 
-    CHALLENGES {
-        string id PK "QO-101, QO-102"
-        string title
-        string tier "tier1_core, tier2_corp"
-        string stack "python_fastapi_redis"
-        jsonb sla_thresholds "rps, p95_max, ram_max"
-        text starter_code
-        text canonical_solution
-        boolean is_active
-    }
-
-    SUBMISSIONS {
-        uuid id PK
-        uuid user_id FK
-        string challenge_id FK
-        text submitted_code
-        string commit_hash
-        string status "RUNNING, PASSED, FAILED"
-        int defense_score
-        timestamp created_at
-    }
-
-    TELEMETRY_METRICS {
-        uuid id PK
-        uuid submission_id FK, UK
-        int tests_passed
-        int tests_total
-        float p95_latency_ms
-        float p99_latency_ms
-        int throughput_rps
-        float ram_delta_mb
-        int duplicate_invariants
-        timestamp executed_at
-    }
-
-    BADGES {
-        string badge_hash PK "SHA-256"
-        uuid submission_id FK, UK
-        uuid user_id FK
-        string challenge_id FK
-        float verified_p95_ms
-        int verified_rps
-        timestamp issued_at
-    }
+    USUARIO ||--o| PERFIL_ESTUDIANTE : "posee"
+    USUARIO ||--o| REPRESENTACION : "ejerce"
+    REPRESENTACION }o--|| ORGANIZACION : "es responsable de"
+    USUARIO ||--o{ EVENTO_AUDITORIA : "origina"
+    ORGANIZACION ||--o{ SOLICITUD_RETO : "presenta"
+    SOLICITUD_RETO ||--o| RETO : "genera"
+    ORGANIZACION ||--o{ RETO : "publica"
+    USUARIO ||--o{ PARTICIPACION : "realiza"
+    RETO ||--o{ PARTICIPACION : "tiene"
+    PARTICIPACION ||--o{ ENTREGA : "origina"
+    RETO ||--o{ ENTREGA : "recibe"
+    RETO ||--o{ PRUEBA : "define"
+    ENTREGA ||--|| EVALUACION : "recibe"
+    EVALUACION ||--o{ RESULTADO_PRUEBA : "produce"
+    RESULTADO_PRUEBA }o--|| PRUEBA : "corresponde"
+    EVALUACION ||--o| CREDENCIAL : "sustenta"
+    USUARIO ||--o{ CREDENCIAL : "conserva"
+    CREDENCIAL ||--o| REVOCACION_CREDENCIAL : "recibe"
 ```
 
 ---
 
-## 6. Contratos de Integración (API Interfaces)
+## 8. Clases UML del Backend
 
-La API expone contratos estrictos serializados mediante **Pydantic v2**:
+**14 clases de dominio + 4 servicios + 2 interfaces**
 
-### 6.1. Envío de Solución y Calificación
-- **Endpoint:** `POST /api/v1/submissions`
-- **Request Payload:**
-```json
-{
-  "challenge_id": "QO-101",
-  "code": "async def checkout(payment: PaymentRequest, db = Depends(get_db)): ...",
-  "defense_answers": [
-    {
-      "question_id": "q1_ttl",
-      "selected_option": "B",
-      "justification": "Se utiliza SETNX con TTL de 120s para evitar deadlocks en caso de caída del worker."
+```mermaid
+classDiagram
+    class Usuario {
+        -identificador: Identificador
+        -nombre: Texto
+        -correo: Texto
+        -logo: Texto [0..1]
+        +cambiarNombre(nombre: Texto) Vacio
+        +actualizarPresentacion(nombre: Texto, logo: Texto) Vacio
     }
-  ]
-}
+    class Organizacion {
+        -identificador: Identificador
+        -nombre: Texto
+        -descripcion: Texto [0..1]
+        -sitioWeb: Texto [0..1]
+        -logo: Texto [0..1]
+        +actualizarPresentacion(nombre: Texto, logo: Texto) Vacio
+    }
+    class PerfilEstudiante {
+        -nombrePublico: Texto
+        -biografia: Texto [0..1]
+        -visibilidad: VisibilidadPerfil
+        -universidad: Texto [0..1]
+        -carrera: Texto [0..1]
+        -ciclo: Entero [0..1]
+        +actualizarPresentacion(nombre: Texto, biografia: Texto) Vacio
+        +definirVisibilidad(visibilidad: VisibilidadPerfil) Vacio
+    }
+    class Representacion {
+        -funcionAutorizada: FuncionRepresentante
+        -momentoInicio: Momento
+        -momentoFin: Momento [0..1]
+        +estaActiva(en: Momento) Booleano
+        +finalizar(en: Momento) Vacio
+    }
+    class EventoAuditoria {
+        -identificador: Identificador
+        -momento: Momento
+        -accion: Texto
+        -resultado: ResultadoOperacion
+        -origen: OrigenEvento
+        -referenciaRecurso: Texto
+        -detalleSaneado: Texto [0..1]
+    }
+    class SolicitudReto {
+        -identificador: Identificador
+        -tituloOriginal: Texto
+        -descripcionPublica: Texto
+        -contenidoOriginalRestringido: Texto [0..1]
+        -momentoRecepcion: Momento
+        -estadoPreparacion: EstadoPreparacion
+        -modeloIA: Texto [0..1]
+        -versionInstrucciones: Texto [0..1]
+        -resumenPreparacion: Texto [0..1]
+        -detalleError: Texto [0..1]
+        +iniciarPreparacion() Vacio
+        +registrarPreparacion(modelo: Texto, version: Texto, resumen: Texto) Vacio
+        +registrarError(detalle: Texto) Vacio
+    }
+    class Reto {
+        -identificador: Identificador
+        -titulo: Texto
+        -descripcion: Texto
+        -criteriosAceptacion: Texto
+        -momentoIncorporacion: Momento
+        -estado: EstadoReto
+        -momentoPublicacion: Momento [0..1]
+        -momentoCierre: Momento [0..1]
+        -repositorioBase: Texto [0..1]
+        -versionBase: Texto [0..1]
+        +publicar(en: Momento) Vacio
+        +cerrar(en: Momento) Vacio
+        +admiteEntregas() Booleano
+    }
+    class Participacion {
+        -identificador: Identificador
+        -momentoIncorporacion: Momento
+        -estado: EstadoParticipacion
+        +condicionCertificacion: CondicionParticipacion (derivado, solo lectura)
+        +admiteEntrega() Booleano
+    }
+    class Prueba {
+        -identificador: Identificador
+        -nombre: Texto
+        -categoria: CategoriaPrueba
+        -obligatoria: Booleano
+        -condicionAprobacion: Texto
+        -limiteEjecucion: Duracion [0..1]
+        +validarDefinicion() Booleano
+    }
+    class Entrega {
+        -identificador: Identificador
+        -numeroIntento: Entero
+        -momentoEntrega: Momento
+        -repositorio: Texto
+        -commit: Texto
+        -referenciaEjecutable: Texto
+    }
+    class Evaluacion {
+        -identificador: Identificador
+        -estadoProcesamiento: EstadoEvaluacion
+        -momentoSolicitud: Momento
+        -momentoInicio: Momento [0..1]
+        -momentoFin: Momento [0..1]
+        -versionEvaluador: Texto
+        -detalleError: Texto [0..1]
+        +iniciar(en: Momento) Vacio
+        +finalizar(resultados: ResultadoPrueba[], en: Momento) Vacio
+        +registrarFallo(detalle: Texto, en: Momento) Vacio
+        +esAprobado() Booleano
+    }
+    class ResultadoPrueba {
+        -condicionEjecucion: CondicionEjecucion
+        -aprobada: Booleano [0..1]
+        -valorObservado: Decimal [0..1]
+        -unidad: Texto [0..1]
+        -duracion: Duracion [0..1]
+        -detalle: Texto [0..1]
+    }
+    class Credencial {
+        -identificadorPublico: Identificador
+        -momentoEmision: Momento
+        -contenidoEmitido: Texto
+        -huellaContenido: Texto
+        +vigente: Booleano (derivado, solo lectura)
+        +estaVigente() Booleano
+    }
+    class RevocacionCredencial {
+        -momentoRevocacion: Momento
+        -motivo: Texto
+    }
+
+    class ServicioSeguridad {
+        <<service>>
+        +autorizar(actor: Usuario, accion: Texto, recurso: Identificador) Booleano
+    }
+    class ServicioRetos {
+        <<service>>
+        +preparar(solicitud: SolicitudReto, actor: Usuario) Reto
+        +publicar(reto: Reto, actor: Usuario) Vacio
+    }
+    class ServicioEvaluacion {
+        <<service>>
+        +registrarEntrega(entrega: Entrega, actor: Usuario) Vacio
+        +solicitar(entrega: Entrega, actor: Usuario) Evaluacion
+        +procesar(evaluacion: Evaluacion) Vacio
+    }
+    class ServicioCertificacion {
+        <<service>>
+        +emitir(evaluacion: Evaluacion) Credencial
+        +revocar(credencial: Credencial, motivo: Texto, actor: Usuario) RevocacionCredencial
+        +consultar(identificador: Identificador) Credencial
+    }
+    class PreparadorIA {
+        <<interface>>
+        +proponer(solicitud: SolicitudReto) Reto
+    }
+    class EvaluadorAislado {
+        <<interface>>
+        +ejecutar(entrega: Entrega, pruebas: Prueba[]) ResultadoPrueba[]
+    }
+
+    Usuario "1" -- "0..1" PerfilEstudiante : posee
+    Usuario "1" -- "0..1" Representacion : ejerce
+    Representacion "0..1" -- "1" Organizacion : es responsable de
+    Usuario "1" -- "0..*" EventoAuditoria : origina
+    Organizacion "1" -- "0..*" SolicitudReto : presenta
+    SolicitudReto "1" -- "0..1" Reto : genera
+    Organizacion "1" -- "0..*" Reto : publica
+    Usuario "1" -- "0..*" Participacion : realiza
+    Reto "1" -- "0..*" Participacion : tiene
+    Participacion "1" -- "0..*" Entrega : origina
+    Reto "1" -- "0..*" Entrega : recibe
+    Reto "1" -- "0..*" Prueba : define
+    Entrega "1" -- "1" Evaluacion : recibe
+    Evaluacion "1" -- "0..*" ResultadoPrueba : produce
+    ResultadoPrueba "0..*" -- "1" Prueba : corresponde
+    Evaluacion "1" -- "0..1" Credencial : sustenta
+    Usuario "1" -- "0..*" Credencial : conserva
+    Credencial "1" -- "0..1" RevocacionCredencial : recibe
+
+    ServicioSeguridad ..> Usuario : autoriza
+    ServicioSeguridad ..> EventoAuditoria : consulta
+    ServicioRetos ..> PreparadorIA : depende de
+    ServicioEvaluacion ..> EvaluadorAislado : depende de
+    ServicioCertificacion ..> Evaluacion : consume
 ```
-- **Response Payload (Aprobado):**
-```json
-{
-  "submission_id": "8f3b2a1c-99d4-4e2a-bb34-51e95b8340f1",
-  "status": "PASSED",
-  "scorecard": {
-    "total_score": 96.5,
-    "tests_passed": 50,
-    "tests_total": 50,
-    "throughput_rps": 1240,
-    "p95_latency_ms": 34.2,
-    "p99_latency_ms": 52.1,
-    "ram_delta_mb": 2.1,
-    "duplicate_records": 0
-  },
-  "badge": {
-    "badge_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "verification_url": "https://qualityopps.dev/verify/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  }
-}
-```
-
-### 6.2. Verificación Pública de Insignia
-- **Endpoint:** `GET /api/v1/verify/{badge_hash}`
-- **Response Payload (Público, sin auth):**
-```json
-{
-  "valid": true,
-  "badge_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "student": {
-    "full_name": "Manuel Aranda",
-    "university": "Universidad Nacional de Ingeniería"
-  },
-  "challenge": {
-    "id": "QO-101",
-    "title": "Idempotencia y Race Conditions en Pasarela de Pagos",
-    "partner": "Fintech Simulación BCP"
-  },
-  "audited_telemetry": {
-    "p95_latency_ms": 34.2,
-    "throughput_rps": 1240,
-    "concurrency_level": "1,200 req concurrentes",
-    "data_integrity": "100% (0 cobros duplicados)",
-    "execution_timestamp": "2026-09-05T11:45:00Z"
-  }
-}
-```
 
 ---
 
-## 7. Deep Dive C3: Componentes de Alta Complejidad
+## 9. Integración con Inteligencia Artificial y Servicios Externos
 
-### 7.1. Test Runner Engine (Oráculo de Estrés en < 3s)
-Para lograr la meta no negociable de **50+ pruebas de estrés en menos de 3.0 segundos**, el motor no arranca contenedores pesados por cada petición. En su lugar opera con un **Worker Pool Asíncrono en Memoria**:
-1. **Sandboxing de AST:** Antes de ejecutar, el módulo AST audita llamadas a sistema no autorizadas (`os.system`, `subprocess`, `eval`).
-2. **Workers Pre-calentados:** Subprocesos Python aislados con límites de memoria fijados mediante `setrlimit` y cgroups.
-3. **Inyector de Concurrencia HTTPX:** Dispara ráfagas asíncronas masivas mediante `asyncio.gather` simulando 1,200 peticiones en paralelo sobre el router en memoria.
-4. **Verificador Formal de Invariantes:** Realiza un recuento ACID en PostgreSQL tras la ráfaga: si existen >= 1 registros duplicados con la misma clave de idempotencia, la suite desaprueba inmediatamente.
-
-### 7.2. Tutor IA Socrático & Gatekeeper Semántico
-1. **Parser de AST Dinámico:** Identifica en milisegundos si el estudiante introdujo llamadas síncronas bloqueantes (`time.sleep()`, `requests.get()`) en funciones `async def`.
-2. **Motor Socrático Restrictivo:** El system prompt instruye al LLM a actuar exclusivamente como facilitador del método socrático. Tiene vetada la emisión de bloques de código de solución.
-3. **Gatekeeper de Doble Pregunta:** Extrae los tokens modificados en el git diff y consulta contra una matriz de trade-offs pre-clasificada, evaluando la respuesta del alumno antes de conceder acceso a la suite de tests.
+| Servicio | Función dentro de la plataforma |
+|---|---|
+| **API de modelo de lenguaje** | Motor del Tutor IA; recibe el contexto construido a partir del árbol de sintaxis abstracta y devuelve orientación socrática. |
+| **Vercel** | Alojamiento de la capa de presentación. |
+| **Railway** | Alojamiento de la capa de servicios y de los trabajadores del entorno de pruebas. |
+| **Supabase** | Instancia gestionada de PostgreSQL. |
 
 ---
 
-## 8. Registros de Decisiones de Arquitectura (ADRs)
+## 10. Seguridad y Trazabilidad
 
-### ADR-001: Worker Pool Asíncrono en Memoria vs. Contenedores Docker en Frío
-* **Estado:** Aprobado
-* **Contexto:** Las bases del evento y la usabilidad del IDE exigen devolver resultados de telemetría de estrés en menos de 3 segundos. El comando `docker run` en frío añade entre 1.5s y 3.5s de sobrecarga únicamente en iniciar el daemon y montar volúmenes, haciendo inviable el SLA.
-* **Decisión:** Implementar un **Worker Pool Asíncrono pre-calentado** con aislamiento a nivel de AST y límites de recursos de Linux (`setrlimit`/`cgroups`) para el MVP.
-* **Consecuencias:** Feedback instantáneo (< 2.8s total), cero latencia de arranque, alta densidad de pruebas simultáneas por servidor.
+- **Inmutabilidad de la credencial:** La Insignia se calcula como resumen criptográfico SHA-256 de la confirmación de cambios y de las métricas de ejecución; cualquier alteración invalida la verificación pública.
+- **Aislamiento de ejecuciones:** Cada envío se evalúa en un contenedor efímero con límites de procesador y memoria; ningún código se ejecuta sobre el servidor.
+- **Objetividad de la evaluación:** Se miden exclusivamente competencias técnicas verificables (algoritmos, latencia, concurrencia, perfilado de memoria y calidad del software).
 
 ---
 
-### ADR-002: Bloqueo Atómico Distribuido en Redis (`SET NX PX`) vs. `SELECT FOR UPDATE` en PostgreSQL
-* **Estado:** Aprobado
-* **Contexto:** En escenarios de ráfaga (CyberDay / Flash Sales con 15,000 req/s), aplicar bloqueos a nivel de fila en PostgreSQL satura el Connection Pool y degrada los servicios downstream provocando cascadas de errores HTTP 500.
-* **Decisión:** Exigir como estándar de producción el uso de **Distributed Locks en Redis** mediante primitivas atómicas de una sola instrucción (`SET lock_key client_id NX PX 120000`). PostgreSQL se reserva para persistencia ACID con degradación optimista de fallback.
-* **Consecuencias:** Latencia de verificación de lock < 2ms; alivio del 90% de conexiones simultáneas a la base de datos relacional.
+## 11. Tecnologías Empleadas
 
----
-
-### ADR-003: Oráculo de Verificación Híbrido P vs. NP (Telemetría Empírica + IA Socrática)
-* **Estado:** Aprobado
-* **Contexto:** Las plataformas tradicionales delegan la evaluación en la inspección manual de código por ingenieros Senior ($100 USD/h), o en verificadores de sintaxis que no garantizan comportamiento bajo estrés. Un LLM tampoco puede actuar como único juez, ya que es probabilístico.
-* **Decisión:** Implementar un **Oráculo Híbrido**: la verificación de estrés y latencia se resuelve de forma determinista empírica (Tiempo P), mientras que la asimilación conceptual se valida mediante el Tutor IA Socrático actuando como Gatekeeper.
-* **Consecuencias:** Cero horas requeridas de ingenieros Senior para calificar; eliminación del fraude por copypaste de ChatGPT; emisión de credenciales 100% auditables.
-
----
-
-## 9. Despliegue e Infraestructura Cloud
-
-| Componente | Plataforma de Hosting | Configuración / Tier | Propósito |
-| :--- | :--- | :--- | :--- |
-| **Frontend & IDE** | **Vercel** | Edge Network / Node.js 18 | Despliegue global de Next.js y assets estáticos de Monaco. |
-| **API & Test Runner** | **Railway** | Contenedor Linux (2 vCPU, 4GB RAM) | Ejecución de FastAPI y orquestador asíncrono de pruebas. |
-| **Base de Datos** | **Supabase** | PostgreSQL 15 Administrado | Persistencia con pooling transaccional y backups automáticos. |
-| **Cache & Locks** | **Redis Cloud** | Instancia en memoria dedicada | Almacenamiento volátil ultra-rápido (< 2ms de latencia). |
-| **Modelos de IA** | **Google Gemini / OpenAI API**| SDK Asíncrono con caching | Inferencia socrática de bajo costo y baja latencia. |
+| Capa | Tecnologías |
+|---|---|
+| **Presentación** | React / Next.js, Tailwind CSS, Monaco Editor |
+| **Servicios** | Python, FastAPI (asincronía nativa), Pydantic |
+| **Datos** | PostgreSQL, Redis |
+| **Entorno de pruebas** | Contenedores Docker efímeros con grupos de control, integración y entrega continuas |
+| **Inteligencia artificial** | Modelo de lenguaje externo con caché de indicaciones, análisis de árbol de sintaxis abstracta |
+| **Infraestructura** | Vercel, Railway, Supabase |
