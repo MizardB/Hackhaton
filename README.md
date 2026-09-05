@@ -2,7 +2,7 @@
 
 > **HUB de retos y oportunidades de aprendizaje aplicado** que convierte lo que un estudiante resuelve en **evidencia verificable de lo que realmente puede hacer**.
 
-**Quality Opportunities centraliza oportunidades dispersas, permite resolverlas bajo criterios claros y transforma cada resultado relevante en Proof-of-Work navegable para el CV.** Nace desde software por su facilidad para validar desempeño mediante tests y telemetría, pero el modelo está pensado para extenderse a otras disciplinas donde exista un problema, un artefacto observable y una forma defendible de evaluarlo.
+**Quality Opportunities centraliza oportunidades dispersas, permite resolverlas bajo criterios claros y transforma cada resultado relevante en Proof-of-Work navegable para el CV.** Nace desde software porque allí el desempeño puede comprobarse con pruebas y métricas técnicas, pero el modelo está pensado para extenderse a otras disciplinas donde exista un problema, un artefacto observable y una forma defendible de evaluarlo.
 
 ```text
 OPORTUNIDADES DISPERSAS
@@ -43,7 +43,7 @@ Quality Opportunities conecta esos dos problemas: **descubrimiento de oportunida
 
 ### Usuario Objetivo
 
-El usuario principal inicial es el **estudiante universitario de 5.º a 9.º ciclo** de Ingeniería de Sistemas, Software, Computación y carreras afines, con formación teórica pero poca experiencia verificable en problemas de producción.
+El usuario principal inicial es el **estudiante universitario de 5.º a 9.º ciclo** de Ingeniería de Sistemas, Software, Computación y carreras afines, con formación teórica pero poca experiencia verificable frente a problemas cercanos a contextos profesionales.
 
 Como actores del ecosistema participan:
 
@@ -77,7 +77,7 @@ Puede ser simulado, pero debe conservar restricciones, decisiones y criterios qu
 
 #### 2. Reto Empresarial Sanitizado
 
-Desafío basado en una problemática real de una organización, transformado para proteger información sensible mediante abstracción del contexto, datos sintéticos o anonimizados, repositorios aislados y eliminación de detalles internos innecesarios.
+Desafío basado en una problemática real de una organización, **adaptado para poder resolverse sin exponer información sensible** mediante datos sintéticos o anonimizados, repositorios aislados y eliminación de detalles internos innecesarios.
 
 **Sanitizar no significa borrar la identidad de la empresa.** Cuando la organización lo autorice, su marca puede permanecer visible mientras datos, arquitectura interna, código propietario y demás información confidencial permanecen protegidos.
 
@@ -91,7 +91,7 @@ Esto permite que una empresa participe sin reconstruir una convocatoria que ya p
 
 1. **Descubrir:** el estudiante encuentra una oportunidad según área, dificultad, habilidades y modalidad.
 2. **Resolver:** utiliza IA, documentación, librerías y herramientas modernas.
-3. **Evaluar:** el reto define criterios verificables de éxito —correctitud, rendimiento, resiliencia, consistencia, calidad del artefacto u otros según el contexto—.
+3. **Evaluar:** QO comprueba la solución con criterios definidos por el reto; en software pueden incluir correctitud, rendimiento, resiliencia o consistencia.
 4. **Defender:** cuando corresponde, el estudiante explica decisiones o responde ante un cambio de condición.
 5. **Evidenciar:** QO registra el resultado como Proof-of-Work enlazable desde su perfil.
 
@@ -136,13 +136,13 @@ Empresa / Docente / Comunidad / QO / Plataforma externa
        herramientas modernas     artefacto
                                       |
                                       v
-                           Evaluación reproducible
+                           Comprobación reproducible
                                       |
                            +----------+----------+
                            |                     |
                            v                     v
-                    Happy Path /           Critical Case /
-                    criterios base         criterios del reto
+                    Caso normal /          Caso crítico /
+                    Happy Path             Critical Case
                            |                     |
                            +----------+----------+
                                       |
@@ -153,7 +153,8 @@ Empresa / Docente / Comunidad / QO / Plataforma externa
                               Proof-of-Work
                                       |
                                       v
-                        CV Dinámico / Skill Graph
+                 CV Dinámico / Mapa de habilidades
+                              (Skill Graph)
 ```
 
 ---
@@ -201,9 +202,9 @@ Al cierre de un reto, el estudiante puede comparar su implementación con una so
 
 ## 5. Evaluacion Tecnica y Testing
 
-La calidad del proyecto depende de que cada reto tenga criterios **claros, verificables y reproducibles**. QO no promete una batería universal: cada challenge define qué evidencia demuestra éxito según el problema.
+QO busca **comprobar que una solución realmente funciona bajo criterios claros y repetibles**. En software, esta comprobación puede ejecutarse automáticamente en un entorno aislado —sandbox— y adaptarse a lo que cada reto necesita medir.
 
-En la vertical inicial de software, el sandbox puede validar:
+Puede validar:
 
 - **Happy Path:** el flujo principal funciona correctamente.
 - **Critical Case:** la solución resiste la condición de alto impacto que puede romper el sistema.
@@ -223,9 +224,9 @@ Para la demo del MVP priorizamos dos señales que un jurado puede comprender inm
 
 ---
 
-## 6. Proof-of-Work, La Insignia y CV Dinamico
+## 6. Proof-of-Work: Evidencia, Insignia y CV Dinamico
 
-El producto no termina cuando un reto aparece como “completado”. El resultado importante es una **evidencia profesional explorable**.
+El producto no termina cuando un reto aparece como “completado”. El resultado importante es una **evidencia profesional explorable**: el Proof-of-Work que respalda lo que el estudiante afirma saber hacer.
 
 Cada Proof-of-Work puede incluir:
 
@@ -319,7 +320,7 @@ Software es la **primera vertical de validación, no el límite de QO**. El mism
 | **Negocios y Gestión** | Estrategia, finanzas, marketing, operaciones, supply chain y emprendimiento. |
 | **Derecho, Políticas y Ciencias Sociales Aplicadas** | Casos jurídicos, compliance, políticas públicas, investigación y argumentación basada en evidencia. |
 
-El mecanismo de evaluación cambia con la disciplina: software puede utilizar tests y telemetría; diseño, proceso y artefactos; negocios, análisis y métricas; Derecho, investigación, argumentación y defensa.
+El mecanismo de evaluación cambia con la disciplina: software puede utilizar **pruebas automatizadas y métricas técnicas**; diseño, proceso y artefactos; negocios, análisis y métricas; Derecho, investigación, argumentación y defensa.
 
 ### Tres ejes de escalabilidad
 
