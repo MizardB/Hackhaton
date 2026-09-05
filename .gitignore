@@ -68,3 +68,8 @@ scratch/
 
 # Vault 
 Hackhaton_vault/
+
+# Bases locales y cache de herramientas
+*.db
+*.sqlite3
+.ruff_cache/

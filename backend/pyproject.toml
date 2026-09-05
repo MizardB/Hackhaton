@@ -1,0 +1,34 @@
+[tool.ruff]
+line-length = 120
+target-version = "py311"  # el equipo puede tener 3.11; no se usa sintaxis exclusiva de 3.12
+# `exclude` REEMPLAZA la lista por defecto de ruff, no la amplia: sin `.venv` aqui, el linter
+# analiza las librerias instaladas y sepulta los avisos del codigo propio.
+exclude = ["alembic/versions", ".venv", ".ruff_cache", "__pycache__"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort: orden de imports
+    "B",    # flake8-bugbear: fallos sutiles
+    "UP",   # pyupgrade: sintaxis moderna
+    "C4",   # comprehensions
+    "SIM",  # simplificaciones
+    "T20",  # prohibe print() fuera de scripts
+]
+ignore = [
+    "B008",  # Depends() en valores por defecto es el patron normal de FastAPI
+]
+
+[tool.ruff.lint.per-file-ignores]
+"seed.py" = ["T20"]        # es un script: imprime lo que sembro
+"verificar_e2b.py" = ["T20"]  # script de comprobacion: su salida ES la evidencia
+"tests/*" = ["E501"]
+# conftest fija variables de entorno ANTES de importar la aplicacion: los imports van despues
+# de codigo a proposito (de ahi los `# noqa: E402`) y reordenarlos rompe esa precondicion.
+"tests/conftest.py" = ["E501", "I001"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
