@@ -1,0 +1,14 @@
+# Evita que el plan gratuito del PaaS duerma el servicio durante la evaluacion del jurado
+# y el pitch. Activar (o cambiar la URL) en cuanto exista el despliegue.
+name: Mantener despierto
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS "${{ vars.BACKEND_URL }}/health" || echo "sin respuesta"
