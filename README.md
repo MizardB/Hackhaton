@@ -1,8 +1,27 @@
 # Quality Opportunities
 
-> **HUB de retos y oportunidades de aprendizaje aplicado** basado en **Challenge-Based Learning** y **Proof-of-Work**. Quality Opportunities reúne desafíos educativos, empresariales y abiertos para convertir lo que un estudiante resuelve en evidencia verificable de lo que realmente puede hacer.
+> **HUB de retos y oportunidades de aprendizaje aplicado** que convierte lo que un estudiante resuelve en **evidencia verificable de lo que realmente puede hacer**.
 
-Nace desde el desarrollo de software porque permite validar el modelo con rapidez mediante tests, telemetría y entornos reproducibles, pero su visión es extenderse a cualquier disciplina donde el aprendizaje pueda demostrarse con evidencia, criterios claros y defensa.
+**Quality Opportunities centraliza oportunidades dispersas, permite resolverlas bajo criterios claros y transforma cada resultado relevante en Proof-of-Work navegable para el CV.** Nace desde software por su facilidad para validar desempeño mediante tests y telemetría, pero el modelo está pensado para extenderse a otras disciplinas donde exista un problema, un artefacto observable y una forma defendible de evaluarlo.
+
+```text
+OPORTUNIDADES DISPERSAS
+Hackathons · Retos educativos · Empresas · Open Issues · Concursos
+                              |
+                              v
+                  QUALITY OPPORTUNITIES
+                              |
+                              v
+                  Resolver + Evaluar + Defender
+                              |
+                              v
+                        PROOF-OF-WORK
+                              |
+                              v
+                CV DINÁMICO / SKILL GRAPH
+```
+
+> **La idea central:** no queremos que el estudiante diga “sé hacerlo”; queremos que pueda **mostrar qué resolvió, cómo fue evaluado y por qué su solución merece confianza**.
 
 ---
 
@@ -10,71 +29,67 @@ Nace desde el desarrollo de software porque permite validar el modelo con rapide
 
 ### Problematica
 
-La formación universitaria en desarrollo de software sigue apoyándose en ejercicios académicos aislados que muchas veces no representan las condiciones, restricciones ni decisiones que aparecen en un entorno profesional. El problema no es que los estudiantes utilicen herramientas de Inteligencia Artificial: **la IA ya forma parte del presente y del futuro del estudio y del trabajo técnico**. El problema aparece cuando una solución puede ser entregada sin que exista evidencia de que el estudiante realmente comprende lo que construyó, por qué funciona, cuáles son sus límites o cómo defender sus decisiones.
+La formación universitaria todavía se apoya en muchos ejercicios académicos aislados que no reproducen las restricciones, decisiones ni fallos de un entorno profesional. Al mismo tiempo, la IA permite producir soluciones cada vez más rápido, por lo que entregar código o un documento terminado ya no demuestra por sí solo que exista comprensión.
 
-Quality Opportunities adopta una postura distinta: **la IA está permitida como herramienta de aprendizaje y construcción**. Un estudiante puede apoyarse en asistentes de IA, documentación, buscadores, librerías o cualquier herramienta moderna; lo importante es que pueda **entender, explicar, modificar, justificar y defender** el resultado cuando sea necesario. No buscamos medir quién programa sin herramientas, sino quién es capaz de convertir herramientas potentes en conocimiento propio y demostrable.
+El resultado es la paradoja del **“CV en blanco”**: estudiantes con conocimientos y proyectos, pero con poca evidencia verificable de desempeño frente a problemas cercanos al mundo profesional.
 
-Como consecuencia del modelo académico tradicional, muchos estudiantes pueden egresar con buenas notas, pero con un **“CV en blanco”**: un currículum que enumera conocimientos y proyectos, pero ofrece poca evidencia verificable de desempeño frente a problemas cercanos a un entorno profesional.
+Las oportunidades para obtener esa experiencia sí existen, pero suelen estar **fragmentadas** entre hackathons, datathons, programas universitarios, concursos, retos empresariales, comunidades y plataformas externas. Incluso cuando el estudiante participa, la evidencia suele quedar repartida entre certificados, repositorios, presentaciones y enlaces difíciles de interpretar rápidamente.
 
-A esto se suma otro problema: las oportunidades para adquirir esa experiencia existen, pero suelen estar **dispersas** entre hackathons, datathons, programas universitarios, concursos, retos empresariales, comunidades y plataformas externas. El estudiante debe encontrarlas por separado y, una vez terminadas, la evidencia producida suele quedar fragmentada.
+Quality Opportunities conecta esos dos problemas: **descubrimiento de oportunidades + evidencia de capacidad**.
 
 ### Usuario Objetivo
 
-El usuario principal inicial es el **estudiante universitario de 5.º a 9.º ciclo** de Ingeniería de Sistemas, Software, Computación y carreras afines, con conocimientos teóricos pero con poca o ninguna experiencia verificable en sistemas de producción.
+El usuario principal inicial es el **estudiante universitario de 5.º a 9.º ciclo** de Ingeniería de Sistemas, Software, Computación y carreras afines, con formación teórica pero poca experiencia verificable en problemas de producción.
 
-A medida que la plataforma escale, este perfil podrá ampliarse hacia estudiantes de otras ramas de ingeniería y disciplinas donde sea posible producir y evaluar evidencia observable.
+Como actores del ecosistema participan:
 
-Como actores secundarios participan:
-
-- **Empresas**, que pueden publicar, adaptar, patrocinar o enlazar retos y oportunidades.
-- **Universidades**, que pueden utilizar retos como evidencia de resolución de problemas complejos y aprendizaje aplicado.
-- **Comunidades técnicas, docentes y profesionales senior**, que pueden ayudar a curar retos relevantes a partir de experiencia de mercado y situaciones reales de la industria.
+- **Empresas**, que pueden publicar, adaptar, patrocinar o enlazar retos y observar talento resolviendo contextos relevantes antes de una entrevista.
+- **Universidades**, que pueden utilizar retos y artefactos como evidencia de aprendizaje aplicado.
+- **Comunidades, docentes y profesionales senior**, que pueden curar desafíos a partir de experiencia de mercado, casos documentados y necesidades recurrentes de la industria.
 
 ### Propuesta de Valor y Alcance Lean MVP
 
-Quality Opportunities funciona como un **HUB de oportunidades de resolución**: centraliza retos que hoy aparecen en espacios separados y los conecta con un sistema de evidencia acumulativa.
+Quality Opportunities funciona como un **HUB de oportunidades de resolución**. El estudiante encuentra un reto, lo resuelve con las herramientas modernas que considere necesarias, su trabajo se somete a criterios definidos por el challenge y el resultado puede convertirse en una página de **Proof-of-Work**.
 
-```text
-Hackathons ─────────────┐
-Datathons ──────────────┤
-Retos educativos ───────┤
-Retos empresariales ────┼──> QUALITY OPPORTUNITIES
-Open Issues ────────────┤           |
-Concursos externos ─────┘           v
-                              Resolver y demostrar
-                                      |
-                                      v
-                              Proof-of-Work / CV
-```
+Esa página no es una simple medalla: puede mostrar **qué problema resolvió, qué entregó, qué pruebas superó, qué métricas obtuvo, qué decisiones defendió y qué organización estuvo asociada al reto**.
 
-Para esta primera fase, los retos se organizan en **tres modalidades iniciales**. No son categorías rígidas: representan distintos grados de cercanía con una organización y permiten que el ecosistema funcione incluso antes de contar con alianzas corporativas a gran escala.
+Así, el valor para cada actor se entiende en una línea:
+
+| Actor | Valor principal |
+| :--- | :--- |
+| **Estudiante** | Convierte práctica en evidencia profesional navegable y acumulativa. |
+| **Empresa** | Transforma problemas u oportunidades en una forma de observar capacidad aplicada y fortalecer employer branding. |
+| **Universidad / Comunidad** | Convierte aprendizaje aplicado en artefactos y resultados más fáciles de observar y documentar. |
+
+### Tres modalidades iniciales de retos
+
+No son categorías rígidas; representan tres maneras de alimentar el HUB sin depender de una única fuente.
 
 #### 1. Reto Educativo Curado
 
 Problema construido a partir de **investigación del mercado, casos públicos, postmortems, documentación técnica, proyectos open source y entrevistas o validación con profesionales senior** que conocen las necesidades de la industria.
 
-Puede ser completamente simulado, pero debe conservar restricciones, decisiones y criterios que obliguen al estudiante a desarrollar una capacidad relevante.
+Puede ser simulado, pero debe conservar restricciones, decisiones y criterios que desarrollen una capacidad relevante.
 
 #### 2. Reto Empresarial Sanitizado
 
 Desafío basado en una problemática real de una organización, transformado para proteger información sensible mediante abstracción del contexto, datos sintéticos o anonimizados, repositorios aislados y eliminación de detalles internos innecesarios.
 
-**Sanitizar no significa borrar la identidad de la empresa.** Cuando la organización lo autorice, su nombre puede permanecer visible mientras la infraestructura, los datos, el código propietario y demás información confidencial permanecen protegidos.
+**Sanitizar no significa borrar la identidad de la empresa.** Cuando la organización lo autorice, su marca puede permanecer visible mientras datos, arquitectura interna, código propietario y demás información confidencial permanecen protegidos.
 
 #### 3. Open Issue u Oportunidad Abierta
 
-Problema, hackathon, datathon, concurso o challenge que una organización decide publicar abiertamente. Quality Opportunities puede alojarlo directamente o actuar como **capa de descubrimiento**, mostrando la oportunidad y redirigiendo a su plataforma oficial cuando corresponda.
+Problema, hackathon, datathon, concurso o challenge que una organización decide publicar abiertamente. Quality Opportunities puede alojarlo directamente o funcionar como **capa de descubrimiento**, enviando al estudiante a la plataforma oficial cuando el reto ya existe fuera de QO.
 
-Esto permite integrar oportunidades existentes sin obligar a las empresas a reconstruirlas dentro de QO.
+Esto permite que una empresa participe sin reconstruir una convocatoria que ya posee y abre modelos de promoción, partnership e integración.
 
-#### Flujo principal
+### Flujo principal
 
-1. **Descubrimiento del reto:** el estudiante encuentra una oportunidad dentro del HUB según área, dificultad, habilidades y modalidad.
-2. **Resolución asistida por herramientas:** puede utilizar IA, documentación, librerías y herramientas modernas.
-3. **Evaluación:** cada reto define criterios verificables de éxito —correctitud, rendimiento, resiliencia, consistencia, calidad del artefacto u otras métricas según el contexto— ejecutados o revisados de forma reproducible.
-4. **Validación de comprensión:** cuando corresponda, el estudiante explica decisiones, responde preguntas o defiende partes de su trabajo.
-5. **Proof-of-Work:** el resultado se convierte en una evidencia pública asociada al reto, la entrega y su evaluación.
-6. **CV Dinámico:** las mejores evidencias fortalecen el perfil de habilidades del estudiante.
+1. **Descubrir:** el estudiante encuentra una oportunidad según área, dificultad, habilidades y modalidad.
+2. **Resolver:** utiliza IA, documentación, librerías y herramientas modernas.
+3. **Evaluar:** el reto define criterios verificables de éxito —correctitud, rendimiento, resiliencia, consistencia, calidad del artefacto u otros según el contexto—.
+4. **Defender:** cuando corresponde, el estudiante explica decisiones o responde ante un cambio de condición.
+5. **Evidenciar:** QO registra el resultado como Proof-of-Work enlazable desde su perfil.
 
 ### Ejemplos de Retos
 
@@ -147,229 +162,170 @@ Empresa / Docente / Comunidad / QO / Plataforma externa
 | **Editor Web** | Monaco Editor | Edición y visualización de código y diffs directamente en navegador. |
 | **Backend** | Python + FastAPI | APIs asíncronas, ejecución de pruebas, webhooks y servicios de evaluación. |
 | **Validacion** | Pydantic | Contratos estrictos y validación estructurada de entradas y resultados. |
-| **Base de Datos** | PostgreSQL | Persistencia relacional de usuarios, retos, intentos, resultados e insignias. |
+| **Base de Datos** | PostgreSQL | Persistencia relacional de usuarios, retos, intentos, resultados y evidencia. |
 | **Caching / Colas** | Redis | Soporte para benchmarking, colas y escenarios de optimización. |
 | **Sandbox** | Docker | Aislamiento efímero de ejecuciones y límites de CPU/memoria. |
 | **CI/CD** | Pipeline automatizado | Ejecución reproducible de tests, benchmarks y validaciones por entrega. |
 | **IA** | Tutor IA Socrático + asistencia contextual | Apoyo al aprendizaje, razonamiento y comprensión del trabajo realizado. |
-| **Credencial** | SHA-256 | Vinculación de evidencia con entregas y resultados verificables. |
+| **Integridad** | SHA-256 | Vinculación de evidencia con entregas y resultados verificables. |
 
 ### IA como herramienta de aprendizaje
 
-Quality Opportunities **no penaliza el uso de Inteligencia Artificial**. La plataforma parte de que los futuros profesionales trabajarán junto a herramientas de IA y, por tanto, aprender a utilizarlas correctamente también es una competencia.
+Quality Opportunities **no penaliza el uso de Inteligencia Artificial**. La plataforma parte de que los futuros profesionales trabajarán junto a herramientas de IA y que saber utilizarlas correctamente también es una competencia.
 
-La evaluación se desplaza desde la pregunta:
+La evaluación se desplaza desde:
 
 > “¿Lo hizo completamente solo?”
 
-hacia preguntas más relevantes:
+hacia:
 
-> “¿Entiende lo que construyó?”  
-> “¿Puede explicar por qué funciona?”  
-> “¿Puede detectar cuándo la IA se equivoca?”  
-> “¿Puede modificar la solución ante un nuevo requisito?”  
-> “¿Puede defender sus decisiones técnicas?”
+> “¿Entiende lo que construyó? ¿Puede modificarlo, detectar errores y defender sus decisiones?”
 
 El objetivo no es formar estudiantes que compitan contra la IA, sino estudiantes capaces de **trabajar con IA sin delegar su comprensión**.
 
 ### Tutor IA Socrático y Defensa Técnica
 
-El Tutor IA analiza el código, el progreso y el contexto del reto para guiar al estudiante mediante preguntas sobre arquitectura, algoritmos, trade-offs y decisiones de diseño.
-
-Algunos retos pueden activar una **defensa técnica adaptativa**, seleccionando decisiones, fragmentos o métricas relevantes de la entrega para verificar comprensión. La defensa no busca memorizar código línea por línea, sino comprobar que la solución fue **asimilada**.
+El Tutor IA puede guiar mediante preguntas sobre arquitectura, algoritmos, trade-offs y decisiones de diseño. Algunos retos pueden activar una **defensa técnica adaptativa**, seleccionando decisiones o métricas de la entrega para comprobar que la solución fue asimilada.
 
 ### Aprendizaje Vicario y Diff
 
-Al cierre de un reto, el estudiante puede comparar su implementación con una solución de referencia mediante un visor de diferencias, entendiendo decisiones técnicas y trade-offs utilizados en una solución optimizada.
+Al cierre de un reto, el estudiante puede comparar su implementación con una solución de referencia mediante un visor de diferencias, entendiendo decisiones técnicas y trade-offs alternativos.
 
 ---
 
 ## 5. Evaluacion Tecnica y Testing
 
-La calidad del proyecto depende de que cada reto tenga criterios **claros, verificables y reproducibles**. El mecanismo de evaluación cambia según la naturaleza del desafío; no todos los retos necesitan las mismas métricas ni la misma infraestructura.
+La calidad del proyecto depende de que cada reto tenga criterios **claros, verificables y reproducibles**. QO no promete una batería universal: cada challenge define qué evidencia demuestra éxito según el problema.
 
 En la vertical inicial de software, el sandbox puede validar:
 
-- **Happy Path:** flujo principal completado correctamente.
-- **Critical Case:** condición de alto impacto capaz de romper la solución o revelar una decisión incorrecta.
+- **Happy Path:** el flujo principal funciona correctamente.
+- **Critical Case:** la solución resiste la condición de alto impacto que puede romper el sistema.
 - **Stress / Performance:** comportamiento bajo carga cuando sea relevante.
 - **Memory Stability:** consumo anómalo y degradación de rendimiento.
 - **Idempotencia y Resiliencia:** consistencia frente a reintentos o fallos parciales.
-- **Comprensión / Defensa:** capacidad de justificar las decisiones tomadas cuando el reto lo requiera.
+- **Comprensión / Defensa:** capacidad de justificar las decisiones cuando el reto lo requiera.
 
 ### Criterios definidos por reto
 
-En lugar de imponer cifras universales, cada challenge establece sus propios umbrales y evidencias de éxito. Un reto puede requerir decenas de pruebas automatizadas, límites concretos de latencia o concurrencia, mientras otro puede valorar principalmente correctitud, consistencia o calidad de la defensa.
+Un challenge puede exigir decenas de pruebas automatizadas, límites concretos de latencia o concurrencia; otro puede valorar principalmente correctitud, consistencia o calidad de la defensa. **Las métricas concretas pertenecen al reto, no son promesas universales de la plataforma.**
 
-Para la demo del MVP priorizamos dos señales fácilmente comprensibles:
+Para la demo del MVP priorizamos dos señales que un jurado puede comprender inmediatamente:
 
-- **Happy Path:** demostrar que la solución funciona cuando todo ocurre como se espera.
-- **Critical Case:** demostrar qué ocurre ante la condición que realmente puede romper el sistema.
+- **Happy Path:** funciona cuando todo ocurre como se espera.
+- **Critical Case:** sigue siendo correcto cuando aparece la condición que realmente puede romperlo.
 
 ---
 
 ## 6. Proof-of-Work, La Insignia y CV Dinamico
 
-Quality Opportunities no busca convertir cada reto completado en un simple bullet de CV. Cada resultado relevante puede generar una **página de Proof-of-Work** que permita explorar la evidencia detrás de la afirmación.
+El producto no termina cuando un reto aparece como “completado”. El resultado importante es una **evidencia profesional explorable**.
 
-Puede incluir:
+Cada Proof-of-Work puede incluir:
 
-- Identidad y modalidad del reto.
-- Organización asociada, cuando corresponda.
-- Commit, repositorio o artefacto evaluado.
-- Resultado de las pruebas o criterios de evaluación.
-- Métricas relevantes del challenge.
-- Evidencia de defensa o comprensión.
-- Feedback empresarial o institucional cuando exista.
-- Hash SHA-256 para comprobar integridad de la evidencia asociada.
+- identidad y modalidad del reto;
+- organización asociada, cuando corresponda;
+- commit, repositorio o artefacto evaluado;
+- resultado de pruebas o criterios de evaluación;
+- métricas relevantes del challenge;
+- defensa o explicación técnica;
+- feedback empresarial o institucional cuando exista;
+- hash SHA-256 para comprobar integridad de la evidencia asociada.
 
-Así, el CV Dinámico puede pasar de:
+La Insignia funciona como una representación resumida de esa evidencia, mientras que la **Proof-of-Work Page es la fuente verificable detrás de ella**.
+
+Así, el CV puede pasar de:
 
 > “Experiencia en backend.”
 
-a una evidencia navegable como:
+A:
 
-> **Transaction Reliability Challenge · Gold** — solución, evaluación, repositorio y defensa verificables desde el perfil.
+> **Transaction Reliability Challenge · Gold** — solución, criterios superados, repositorio y defensa accesibles desde el perfil.
 
 ### Trust & Quality
 
-El valor del perfil no depende de acumular retos de forma indiscriminada. QO prioriza **calidad, dificultad, diversidad y nivel de verificación** sobre volumen bruto.
+QO no premia simplemente “hacer más”. El perfil prioriza **calidad, dificultad, diversidad y nivel de verificación** sobre volumen bruto.
 
-Repetir desafíos muy similares puede aportar valor marginal decreciente; el perfil profesional prioriza las mejores evidencias y algunos retos pueden requerir validaciones adicionales o defensa. La unidad de valor no es simplemente el reto completado, sino **la evidencia verificable que ese reto añade a una competencia**.
+Repetir retos casi idénticos aporta valor marginal decreciente; el CV destaca las mejores evidencias y determinados challenges pueden exigir defensa o validación adicional. La unidad de valor no es el reto completado, sino **la evidencia que ese reto añade a una competencia**.
 
 ---
 
 ## 7. Modelo de Negocio y Alianzas
 
-Quality Opportunities está planteado como una plataforma educativa y de evidencia, **no como una bolsa de empleo**. La contratación puede surgir como consecuencia de demostrar capacidades, pero no constituye el producto central.
+Quality Opportunities es una plataforma educativa y de evidencia, **no una bolsa de empleo**. Una contratación puede ser una consecuencia de demostrar capacidad, pero no es el producto central.
 
 | Segmento | Modelo |
 | :--- | :--- |
 | **Estudiantes — Free** | Acceso a retos, evaluación base y construcción de evidencia. |
 | **Estudiantes — Pro** | Tutor IA Socrático, scorecards avanzados, telemetría, defensa adaptativa y visor Diff. |
-| **Empresas — B2B** | Publicación o sanitización de retos, patrocinio, employer branding y acceso a talento que ya resolvió sus desafíos. |
+| **Empresas — B2B** | Publicación o sanitización de retos, patrocinio, employer branding y acceso a evidencia de participantes que resolvieron sus desafíos. |
 | **Open Issues / Partnerships** | Promoción e integración de concursos, hackathons, datathons o challenges alojados en plataformas externas. |
 | **Universidades — B2U** | Integración curricular y uso institucional de retos y evidencia de aprendizaje aplicado. |
 
 La propuesta plantea un Plan Pro de referencia de **S/. 12 por reto o S/. 35 al mes** y una futura licencia institucional para universidades.
 
-### Retos externos y acuerdos de colaboración
+### ¿Por qué participa una empresa?
 
-Una empresa u organización puede tener un concurso técnico ya publicado y gestionado en su propia página. En ese caso, **Quality Opportunities no necesita recrear el reto**: puede mostrarlo dentro del HUB, dirigir al estudiante al sitio oficial y conservar una capa propia de descubrimiento, orientación y trazabilidad.
+Una organización no necesita regalar su propiedad intelectual ni garantizar contratación. Puede convertir una problemática en un reto seguro, **mantener su marca cuando lo desee y observar cómo distintos participantes resuelven un contexto relevante antes de invertir tiempo en procesos más costosos de evaluación**.
 
-La relación puede incluir promoción patrocinada, partnerships institucionales, employer branding o integraciones técnicas cuando exista un acuerdo. De esta forma, QO puede agregar oportunidades existentes sin competir innecesariamente con la infraestructura que ya utiliza el organizador.
+Si ya posee un concurso o challenge en su propia web, QO tampoco necesita duplicarlo: puede incorporarlo al HUB mediante promoción, partnership o integración y redirigir al sitio oficial.
 
-Para las empresas que sí publiquen retos propios o sanitizados, el retorno no se limita a recibir una solución: obtienen **exposición ante talento relevante, evidencia previa de desempeño y una forma de observar cómo los participantes enfrentan un problema asociado a su contexto**.
+El retorno puede combinar **employer branding, descubrimiento de talento, experimentación sobre problemas no críticos y distribución de oportunidades existentes**.
 
 ---
 
 ## 8. Estrategia de Arranque
 
-Para evitar depender desde el primer día de acuerdos con empresas, la primera fase puede comenzar con **Retos Educativos Curados** construidos a partir de:
+El sistema no necesita esperar a conseguir grandes alianzas para funcionar.
 
-- Investigación del mercado y necesidades técnicas recurrentes.
-- Entrevistas o validación con profesionales senior, tech leads y especialistas del sector.
-- Casos de estudio, postmortems y documentación pública.
-- Arquitecturas y proyectos open source.
-- Patrones reales de concurrencia, idempotencia, datos, rendimiento y resiliencia.
+La primera fase puede comenzar con **Retos Educativos Curados** construidos mediante investigación de mercado, entrevistas con profesionales senior, postmortems, documentación pública y proyectos open source. Conforme crezcan las relaciones externas, el catálogo incorpora **Retos Empresariales Sanitizados** y **Open Issues**.
 
-Esto permite que los estudiantes comiencen a generar evidencia desde el primer momento. Conforme se construyan alianzas, el catálogo puede incorporar **Retos Empresariales Sanitizados** y **Open Issues** de organizaciones reales.
+```text
+FASE DE ARRANQUE
+Retos curados
+      |
+      v
+Evidencia + usuarios
+      |
+      v
+Retos empresariales sanitizados
+      |
+      v
+Open Issues + partnerships + ecosistema externo
+```
+
+Esto reduce el problema de *cold start*: el valor para el estudiante puede existir antes de que la plataforma alcance escala empresarial.
 
 ---
 
 ## 9. Escalabilidad y Evolución del Ecosistema
 
-El MVP valida primero la hipótesis central: convertir resolución de retos en **evidencia de aprendizaje verificable**.
+El MVP valida una hipótesis concreta:
 
-> **Reto + Evidencia + Evaluación + Defensa = Aprendizaje verificable.**
+> **Reto + Evidencia + Evaluación + Defensa = aprendizaje verificable.**
 
-### 9.1 Escalabilidad Multidisciplinaria
+Software es la **primera vertical de validación, no el límite de QO**. El mismo principio puede aplicarse gradualmente a otras familias siempre que sea posible definir un problema, producir un artefacto observable y evaluar o defender el resultado.
 
-El MVP comienza en **desarrollo de software** porque permite automatizar con rapidez la evaluación mediante tests, telemetría y entornos reproducibles. Sin embargo, la arquitectura conceptual de Quality Opportunities está pensada como un marco general para demostrar aprendizaje aplicado en múltiples campos.
+| Familia | Ejemplos de expansión |
+| :--- | :--- |
+| **Tecnología, Ingeniería y Ciencias Aplicadas** | Data/IA, ciberseguridad, mecatrónica, robótica, electrónica, ingeniería industrial y mecánica. |
+| **Diseño y Disciplinas Creativas Aplicadas** | UX/UI, producto, arquitectura, comunicación visual y producción audiovisual. |
+| **Negocios y Gestión** | Estrategia, finanzas, marketing, operaciones, supply chain y emprendimiento. |
+| **Derecho, Políticas y Ciencias Sociales Aplicadas** | Casos jurídicos, compliance, políticas públicas, investigación y argumentación basada en evidencia. |
 
-En lugar de agrupar todas las carreras bajo una sola etiqueta, la expansión puede organizarse por familias de disciplinas:
+El mecanismo de evaluación cambia con la disciplina: software puede utilizar tests y telemetría; diseño, proceso y artefactos; negocios, análisis y métricas; Derecho, investigación, argumentación y defensa.
 
-#### Tecnología, Ingeniería y Ciencias Aplicadas
+### Tres ejes de escalabilidad
 
-- **Ingeniería de Software y Computación:** arquitectura, concurrencia, rendimiento, testing y sistemas distribuidos.
-- **Ingeniería de Datos e IA:** pipelines, modelos, calidad de datos, experimentación y procesamiento distribuido.
-- **Ciberseguridad:** hardening, análisis de vulnerabilidades y respuesta ante incidentes simulados.
-- **Mecatrónica y Robótica:** control, percepción, simulación, ROS, planificación y desempeño de sistemas.
-- **Electrónica:** diseño, simulación, diagnóstico y validación de circuitos.
-- **Ingeniería Mecánica, Industrial y otras ingenierías:** optimización, manufacturabilidad, procesos, simulación y toma de decisiones técnicas.
-
-#### Diseño, Arquitectura y Disciplinas Creativas Aplicadas
-
-- **Diseño de Producto y UX/UI:** investigación de usuario, prototipado, accesibilidad, sistemas de diseño y defensa de decisiones.
-- **Arquitectura y Urbanismo:** propuestas espaciales, restricciones de uso, sostenibilidad, planificación y evaluación de alternativas.
-- **Comunicación Visual y Diseño Gráfico:** sistemas visuales, campañas, identidad y justificación estratégica de soluciones.
-- **Producción audiovisual y medios digitales:** narrativa, producción, edición y resolución de briefs con criterios verificables.
-
-#### Negocios, Gestión y Emprendimiento
-
-- **Administración y Estrategia:** resolución de casos empresariales, priorización, análisis competitivo y planes de ejecución.
-- **Economía y Finanzas:** modelamiento, evaluación de escenarios, análisis de riesgo y toma de decisiones basada en evidencia.
-- **Marketing y Growth:** campañas, experimentación, segmentación, métricas y análisis de resultados.
-- **Emprendimiento e Innovación:** validación de problemas, propuesta de valor, experimentos de mercado y defensa de hipótesis.
-- **Operaciones y Supply Chain:** optimización de procesos, planificación, simulación y respuesta ante restricciones.
-
-#### Derecho, Políticas Públicas y Ciencias Sociales Aplicadas
-
-- **Derecho:** análisis de casos, legal research, redacción de argumentos, negociación, compliance y retos jurídicos simulados o competitivos.
-- **Políticas Públicas:** diseño de intervenciones, análisis regulatorio, evaluación de impacto y defensa de propuestas.
-- **Relaciones Internacionales y Gestión Pública:** negociación, análisis de escenarios, formulación de estrategias y resolución de casos complejos.
-- **Psicología Organizacional y Ciencias del Comportamiento:** diseño de intervenciones, análisis de casos, investigación aplicada y evaluación de resultados.
-- **Comunicación, Periodismo e Investigación Social:** verificación de información, análisis de fuentes, construcción de argumentos y producción de entregables auditables.
-
-El mecanismo de evaluación no tiene por qué ser idéntico en todas las áreas. En software puede predominar la telemetría y los tests automáticos; en diseño puede evaluarse el proceso, los artefactos y la defensa; en negocios, la calidad del análisis y las métricas; y en Derecho, la solidez de la investigación, argumentación y respuesta ante un caso.
-
-Software es, por tanto, **la primera vertical de validación, no el límite de la plataforma**.
-
-### 9.2 Escalabilidad de Fuentes de Retos
-
-Las tres modalidades iniciales permiten crecer sin depender de una única fuente:
-
-- **Educativos Curados:** creados o adaptados por QO con investigación y validación profesional.
-- **Empresariales Sanitizados:** problemáticas reales convertidas en challenges seguros y evaluables.
-- **Open Issues:** oportunidades abiertas alojadas dentro o fuera de QO.
-
-### 9.3 Escalabilidad del Sistema de Evidencia
-
-La Insignia puede evolucionar desde una credencial asociada a código y métricas de software hacia un estándar más general de **Proof-of-Work académico y profesional**, capaz de registrar:
-
-- Qué problema se resolvió.
-- Qué evidencia produjo el estudiante.
-- Cómo fue evaluada.
-- Qué herramientas utilizó.
-- Qué decisiones pudo defender.
-- Qué organización, docente o sistema respaldó el resultado.
-
-Esto permite que el CV Dinámico evolucione hacia un historial acumulativo de capacidades demostradas.
-
-### 9.4 Escalabilidad Institucional y de Alianzas
-
-Quality Opportunities puede crecer mediante relaciones con empresas, universidades, comunidades profesionales, hackathons y plataformas externas. La plataforma funciona así como una **capa de conexión entre aprendizaje, evidencia y ecosistemas de oportunidades**.
+- **Fuentes:** retos curados → empresariales sanitizados → Open Issues y oportunidades externas.
+- **Evidencia:** código y métricas → artefactos multidisciplinarios → historial profesional de capacidades demostradas.
+- **Instituciones:** estudiantes individuales → empresas, universidades, comunidades y plataformas asociadas.
 
 ### Roadmap inicial
 
-1. **Fase 1 — Backend & Performance**
-   - Caching.
-   - Concurrencia.
-   - Idempotencia.
-   - ETL.
-   - Resiliencia.
-
-2. **Fase 2 — Data Engineering**
-   - Procesamiento asíncrono.
-   - Streaming.
-   - Kafka.
-   - Pipelines distribuidos.
-
-3. **Fase 3 — Nuevas disciplinas y ecosistema externo**
-   - Ciberseguridad.
-   - Ingeniería y robótica.
-   - Diseño, negocios y ciencias sociales aplicadas.
-   - Partnerships y expansión del estándar de retos y evidencia.
+1. **Fase 1 — Backend & Performance:** concurrencia, idempotencia, datos, rendimiento y resiliencia.
+2. **Fase 2 — Data Engineering:** procesamiento asíncrono, streaming y pipelines distribuidos.
+3. **Fase 3 — Nuevas disciplinas y ecosistema externo:** ingeniería, diseño, negocios, ciencias sociales aplicadas y partnerships.
 
 ---
 
@@ -422,8 +378,8 @@ uvicorn main:app --reload
 
 ## 12. Vision
 
-**Quality Opportunities quiere convertir el aprendizaje en evidencia y las oportunidades dispersas en un ecosistema accesible.**
+**Quality Opportunities quiere convertir oportunidades dispersas en experiencias accesibles y el aprendizaje aplicado en evidencia.**
 
-No buscamos que un estudiante demuestre que puede trabajar sin herramientas modernas. Buscamos que demuestre que puede **resolver, comprender, validar y defender** lo que construye con ellas.
+Una persona puede entrar por una sola oportunidad —un reto educativo, una problemática empresarial o un challenge abierto— y terminar construyendo una identidad profesional basada menos en lo que afirma saber y más en **lo que puede demostrar, explicar y defender**.
 
-La visión de QO es que una persona pueda entrar por una oportunidad concreta —un reto educativo, un problema empresarial o un challenge abierto— y, a partir de ella, explorar un camino más profundo de aprendizaje, evidencia y crecimiento profesional.
+> **HUB → RETO → EVIDENCIA.** Todo lo demás existe para hacer esa cadena más útil, confiable y escalable.
