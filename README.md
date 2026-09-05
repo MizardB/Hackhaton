@@ -244,12 +244,6 @@ El mecanismo de evaluación cambia con la disciplina: software puede utilizar **
 - **Evidencia:** código y métricas → artefactos multidisciplinarios → historial profesional de capacidades demostradas.
 - **Instituciones:** estudiantes individuales → empresas, universidades, comunidades y plataformas asociadas.
 
-### Roadmap inicial
-
-1. **Fase 1 — Backend & Performance:** concurrencia, idempotencia, datos, rendimiento y resiliencia.
-2. **Fase 2 — Data Engineering:** procesamiento asíncrono, streaming y pipelines distribuidos.
-3. **Fase 3 — Nuevas disciplinas y ecosistema externo:** ingeniería, diseño, negocios, ciencias sociales aplicadas y partnerships.
-
 ---
 
 **Créditos — SinergIA**  
