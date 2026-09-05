@@ -233,11 +233,10 @@ export default function CatalogoPage({ onSelectReto }) {
                     </div>
                     <div className="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-2xs">
                       <div className="flex items-center justify-between text-outline font-label-caps text-label-caps uppercase">
-                        <span>METRICAS TARGET</span>
-                        <span>SLO VALIDATION</span>
+                        <span>¿QUÉ VOY A APRENDER?</span>
                       </div>
                       <div className="font-code-sm text-code-sm text-secondary font-mono tracking-tight break-all">
-                        {reto.metrics}
+                        {reto.habilidades}
                       </div>
                     </div>
                   </div>

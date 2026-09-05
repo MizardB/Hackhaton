@@ -9,6 +9,7 @@ export const RETOS = [
     puntos: 120,
     estado: 'abierto',
     metrics: '>1000 req/s · p95 < 50 ms · memory < 256MB',
+    habilidades: 'Concurrencia · Optimización · Rendimiento',
   },
   {
     id: 'FQ-CORE-7719',
@@ -20,6 +21,7 @@ export const RETOS = [
     puntos: 200,
     estado: 'abierto',
     metrics: '>2500 tx/s · p99 < 80 ms · 0% packet loss',
+    habilidades: 'Transacciones · Consistencia · Integridad',
   },
   {
     id: 'DF-PIPE-3310',
@@ -31,6 +33,7 @@ export const RETOS = [
     puntos: 85,
     estado: 'abierto',
     metrics: '>10000 events/s · lag < 200 ms · auto-recovery',
+    habilidades: 'Flujos de datos · Resiliencia · Recuperación',
   },
   {
     id: 'HM-L7-8821',
@@ -42,6 +45,7 @@ export const RETOS = [
     puntos: 150,
     estado: 'cerrado',
     metrics: '>1000 req/s · p95 < 50 ms · 99.99% uptime',
+    habilidades: 'Redes · Seguridad · Rendimiento',
   },
   {
     id: 'NB-RATELIM-505',
@@ -53,6 +57,7 @@ export const RETOS = [
     puntos: 95,
     estado: 'abierto',
     metrics: '>5000 req/s · jitter < 5 ms · multi-region',
+    habilidades: 'Escalabilidad · Concurrencia · Disponibilidad',
   },
   {
     id: 'AT-IOT-2204',
@@ -64,5 +69,6 @@ export const RETOS = [
     puntos: 70,
     estado: 'cerrado',
     metrics: 'ratio > 10:1 · ingestion p95 < 30 ms',
+    habilidades: 'Eficiencia · Optimización · Recuperación',
   },
 ];
