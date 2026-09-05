@@ -1,6 +1,6 @@
 # Quality Opportunities
 
-> Ecosistema educativo basado en **Challenge-Based Learning** y **Proof-of-Work** que transforma retos técnicos reales, simulados y progresivamente multidisciplinarios en experiencia verificable para estudiantes. Quality Opportunities nace desde el desarrollo de software, pero está diseñado para escalar hacia otras áreas de ingeniería y disciplinas técnicas donde el aprendizaje pueda demostrarse mediante evidencia, métricas y defensa del trabajo realizado.
+> Ecosistema educativo basado en **Challenge-Based Learning** y **Proof-of-Work** que convierte retos técnicos reales y simulados en experiencia verificable. Nace desde el desarrollo de software, pero su modelo está pensado para extenderse a otras disciplinas donde el aprendizaje pueda demostrarse con evidencia, métricas y defensa.
 
 ---
 
@@ -19,25 +19,6 @@ En Perú, esta brecha coincide con una escasez importante de talento calificado 
 Quality Opportunities busca atacar la paradoja del **“CV en blanco”**: el estudiante no puede demostrar experiencia porque nadie le confía problemas reales, y no obtiene acceso a problemas reales porque todavía no puede demostrar experiencia.
 
 Sin embargo, al pertenecer a la línea de **Future of Education**, la plataforma no depende exclusivamente de problemas corporativos reales. Quality Opportunities también incorpora **retos simulados de alta fidelidad**: escenarios diseñados a partir de patrones, restricciones, fallos y métricas propias de sistemas reales. Estos desafíos permiten entrenar capacidades profesionales incluso antes de establecer alianzas con empresas, manteniendo condiciones objetivas de evaluación y una narrativa cercana al trabajo de ingeniería.
-
-### Escalabilidad Multidisciplinaria
-
-El MVP comienza en **desarrollo de software** porque permite automatizar con rapidez la evaluación mediante tests, telemetría y entornos reproducibles. Sin embargo, la arquitectura conceptual de Quality Opportunities no está limitada al software.
-
-El principio general es:
-
-> **Reto + Evidencia + Evaluación + Defensa = Aprendizaje verificable.**
-
-Este modelo puede extenderse posteriormente hacia:
-
-- **Ingeniería de Datos:** pipelines, streaming, calidad y procesamiento distribuido.
-- **Ciberseguridad:** hardening, análisis de vulnerabilidades y respuesta ante incidentes simulados.
-- **Mecatrónica y Robótica:** control, percepción, simulación, ROS, planificación y desempeño de sistemas.
-- **Electrónica:** diseño, simulación, diagnóstico y validación de circuitos.
-- **Diseño e Ingeniería Mecánica:** optimización, simulación, manufacturabilidad y toma de decisiones de diseño.
-- **Otras disciplinas técnicas:** siempre que exista una forma clara de definir un reto, registrar evidencia y evaluar el dominio demostrado.
-
-Software es, por tanto, **la primera vertical de validación**, no el límite de la plataforma.
 
 ### Usuario Objetivo
 
@@ -260,7 +241,7 @@ La propuesta plantea un Plan Pro de referencia de **S/. 12 por reto o S/. 35 al 
 
 ---
 
-## 8. Estrategia de Arranque y Escalabilidad
+## 8. Estrategia de Arranque
 
 Para evitar depender desde el primer día de acuerdos con empresas, la primera fase puede comenzar con retos de alta fidelidad construidos a partir de:
 
@@ -269,36 +250,51 @@ Para evitar depender desde el primer día de acuerdos con empresas, la primera f
 - Patrones de caching y concurrencia.
 - Idempotencia en APIs y pasarelas abiertas.
 - Pipelines de datos y procesamiento asíncrono.
-- Escenarios sintéticos creados específicamente para entrenar competencias técnicas.
 
 Esto permite que los estudiantes comiencen a generar evidencia desde el primer momento mientras se construyen alianzas corporativas.
 
+---
+
+## 9. Escalabilidad Multidisciplinaria
+
+El MVP comienza en **desarrollo de software** porque permite automatizar con rapidez la evaluación mediante tests, telemetría y entornos reproducibles. Sin embargo, la arquitectura conceptual de Quality Opportunities no está limitada al software.
+
+El principio general es:
+
+> **Reto + Evidencia + Evaluación + Defensa = Aprendizaje verificable.**
+
+Este modelo puede extenderse hacia:
+
+- **Ingeniería de Datos:** pipelines, streaming, calidad y procesamiento distribuido.
+- **Ciberseguridad:** hardening, análisis de vulnerabilidades y respuesta ante incidentes simulados.
+- **Mecatrónica y Robótica:** control, percepción, simulación, ROS, planificación y desempeño de sistemas.
+- **Electrónica:** diseño, simulación, diagnóstico y validación de circuitos.
+- **Diseño e Ingeniería Mecánica:** optimización, simulación, manufacturabilidad y toma de decisiones de diseño.
+- **Otras disciplinas técnicas:** siempre que exista una forma clara de definir un reto, registrar evidencia y evaluar el dominio demostrado.
+
+Software es, por tanto, **la primera vertical de validación, no el límite de la plataforma**.
+
 ### Roadmap inicial
 
-1. **Fase 1 — Software, Backend & Performance**
+1. **Fase 1 — Backend & Performance**
    - Caching.
    - Concurrencia.
    - Idempotencia.
    - ETL.
    - Resiliencia.
-   - Uso y defensa de soluciones asistidas por IA.
 
-2. **Fase 2 — Data Engineering & Ciberseguridad**
+2. **Fase 2 — Data Engineering**
    - Procesamiento asíncrono.
    - Streaming.
    - Kafka.
    - Pipelines distribuidos.
-   - Seguridad y resiliencia.
 
-3. **Fase 3 — Expansión Multidisciplinaria**
-   - Mecatrónica y robótica.
-   - Electrónica.
-   - Ingeniería mecánica y diseño.
-   - Otras disciplinas evaluables mediante simulación, evidencia y defensa.
+3. **Fase 3 — Ciberseguridad y nuevas disciplinas**
+   - Expansión del estándar de retos e insignias hacia otras áreas de ingeniería.
 
 ---
 
-## 9. Guia de Setup y Ejecucion Local
+## 10. Guia de Setup y Ejecucion Local
 
 > Esta sección se actualizará con los comandos definitivos cuando quede cerrada la estructura final del repositorio.
 
@@ -334,7 +330,7 @@ uvicorn main:app --reload
 
 ---
 
-## 10. Equipo de Desarrollo: SinergIA
+## 11. Equipo de Desarrollo: SinergIA
 
 | N° | Integrante | Especialidad | Rol en el Proyecto | Perfil GitHub | Foco Operativo |
 | :---: | :--- | :---: | :--- | :--- | :--- |
@@ -345,10 +341,8 @@ uvicorn main:app --reload
 
 ---
 
-## 11. Vision
+## 12. Vision
 
-**Quality Opportunities quiere convertir el aprendizaje en evidencia.**
+**Quality Opportunities quiere convertir el aprendizaje técnico en evidencia.**
 
-No buscamos demostrar que un estudiante puede trabajar sin IA. Buscamos demostrar que puede **resolver problemas utilizando las mejores herramientas disponibles, comprender el resultado, defender sus decisiones y adaptarlo cuando las condiciones cambian**.
-
-El desarrollo de software es nuestro punto de partida. La visión es construir una infraestructura educativa donde cualquier habilidad técnica pueda transformarse en **experiencia demostrable, verificable y acumulable**.
+No buscamos que un estudiante demuestre que puede trabajar sin herramientas modernas. Buscamos que demuestre que puede **resolver, comprender, validar y defender** lo que construye con ellas.
